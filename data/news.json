@@ -6,11 +6,11 @@
       "publishedAt": "2026-07-03T18:30:00+02:00",
       "updatedAt": "2026-07-03T18:30:00+02:00",
       "cover": {
-        "src": "assets/news/zorix-nex-coder-3-cover.svg",
+        "src": "/assets/news/nex-coder-3-preview-update.svg",
         "alt": {
-          "zh-CN": "Zorix Nex Coder 3 公告封面",
-          "en": "Zorix Nex Coder 3 notice cover",
-          "it": "Copertina dell'annuncio di Zorix Nex Coder 3"
+          "zh-CN": "Zorix Nex Coder 3 Preview 官方公告封面",
+          "en": "Official Zorix Nex Coder 3 Preview notice cover",
+          "it": "Copertina ufficiale dell'annuncio di Zorix Nex Coder 3 Preview"
         }
       },
       "category": {
@@ -35,7 +35,7 @@
       },
       "images": [
         {
-          "src": "assets/news/zorix-nex-coder-3-cover.svg",
+          "src": "/assets/news/nex-coder-3-preview-update.svg",
           "alt": {
             "zh-CN": "Zorix Nex Coder 3 说明封面",
             "en": "Zorix Nex Coder 3 explanatory cover",
@@ -55,11 +55,11 @@
       "publishedAt": "2026-07-03T18:00:00+02:00",
       "updatedAt": "2026-07-03T18:30:00+02:00",
       "cover": {
-        "src": "assets/news/zorix-nex-coder-3-cover.svg",
+        "src": "/assets/news/nex-coder-3-preview-update.svg",
         "alt": {
-          "zh-CN": "Zorix Nex Coder 3 公告封面",
-          "en": "Zorix Nex Coder 3 notice cover",
-          "it": "Copertina dell'annuncio di Zorix Nex Coder 3"
+          "zh-CN": "Zorix Nex Coder 3 Preview 官方公告封面",
+          "en": "Official Zorix Nex Coder 3 Preview notice cover",
+          "it": "Copertina ufficiale dell'annuncio di Zorix Nex Coder 3 Preview"
         }
       },
       "category": {
@@ -84,7 +84,7 @@
       },
       "images": [
         {
-          "src": "assets/news/zorix-nex-coder-3-cover.svg",
+          "src": "/assets/news/nex-coder-3-preview-update.svg",
           "alt": {
             "zh-CN": "Zorix Nex Coder 3 说明封面",
             "en": "Zorix Nex Coder 3 explanatory cover",
