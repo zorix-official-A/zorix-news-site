@@ -23,7 +23,7 @@
   // Resolve files from the actual app.js URL, so GitHub Pages repository paths
   // and custom domains both work reliably.
   const scriptUrl = document.currentScript?.src || new URL('../../assets/app.js', window.location.href).href;
-  const siteRoot = new URL('../', scriptUrl);
+  const siteRoot = new URL('../../', scriptUrl);
   const dataUrl = new URL('data/news.json', siteRoot).href;
 
   const language = document.documentElement.lang || 'en';
