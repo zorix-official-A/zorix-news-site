@@ -25,7 +25,16 @@
         "en": "<p>Zorix is pleased to announce the official release of <strong>Nex Coder 2.8</strong>. This release focuses on improving coding efficiency and system stability, delivering a smoother intelligent programming experience for developers.</p><ul><li><strong>Performance Boost:</strong> Core engine refactored, code completion response speed improved by approximately 30%.</li><li><strong>New Feature:</strong> Multi-file context understanding added, supporting cross-file reference auto-completion.</li><li><strong>Optimization:</strong> Enhanced accuracy of code review suggestions with reduced false positive rates.</li><li><strong>Compatibility:</strong> Extended deep support for Python 3.12 and TypeScript 5.6.</li></ul><p>Users can update to the latest version directly via the Zorix official platform or IDE plugin marketplace. For detailed release notes, please visit the Zorix Documentation Center.</p>",
         "it": "<p>Zorix è lieta di annunciare il rilascio ufficiale di <strong>Nex Coder 2.8</strong>. Questo aggiornamento si concentra sul miglioramento dell'efficienza di codifica e della stabilità del sistema, offrendo un'esperienza di programmazione intelligente più fluida per gli sviluppatori.</p><ul><li><strong>Miglioramento delle prestazioni:</strong> Motore principale riprogettato, velocità di risposta del completamento del codice migliorata di circa il 30%.</li><li><strong>Nuova funzionalità:</strong> Aggiunta la comprensione del contesto multi-file, con supporto per il completamento automatico di riferimenti tra file.</li><li><strong>Ottimizzazione:</strong> Migliorata l'accuratezza dei suggerimenti di revisione del codice con riduzione dei falsi positivi.</li><li><strong>Compatibilità:</strong> Esteso il supporto avanzato per Python 3.12 e TypeScript 5.6.</li></ul><p>Gli utenti possono aggiornare all'ultima versione direttamente tramite la piattaforma ufficiale Zorix o il mercato dei plugin IDE. Per le note di rilascio dettagliate, visitare il Centro Documentazione Zorix.</p>"
       },
-      "images": []
+      "images": [
+        {
+          "src": "assets/zorix.png",
+          "alt": {
+            "zh-CN": "Zorix 品牌标识",
+            "en": "Zorix brand logo",
+            "it": "Logo Zorix"
+          }
+        }
+      ]
     }
   ]
 }
