@@ -1,6 +1,41 @@
 {
   "news": [
     {
+      "id": "zorix-nex-coder-3-preview-temporary-pause",
+      "published": true,
+      "publishedAt": "2026-07-03T18:00:00+02:00",
+      "updatedAt": "2026-07-03T18:00:00+02:00",
+      "cover": {
+        "src": "assets/zorix.png",
+        "alt": {
+          "zh-CN": "Zorix Nex Coder 3 Preview 技术公告封面",
+          "en": "Zorix Nex Coder 3 Preview technical notice cover",
+          "it": "Copertina dell'avviso tecnico di Zorix Nex Coder 3 Preview"
+        }
+      },
+      "category": {
+        "zh-CN": "技术公告",
+        "en": "Technical Notice",
+        "it": "Avviso Tecnico"
+      },
+      "title": {
+        "zh-CN": "Zorix Nex Coder 3 Preview 可能暂时停止提供服务",
+        "en": "Zorix Nex Coder 3 Preview May Be Temporarily Paused",
+        "it": "Zorix Nex Coder 3 Preview Potrebbe Essere Temporaneamente Sospeso"
+      },
+      "summary": {
+        "zh-CN": "在内部测试中，Nex Coder 3 Preview 出现了异常的自我指涉与持续身份表达行为。Zorix 正在评估该现象，并可能暂时暂停模型访问。现有底层运行日志将继续保留供研究分析。",
+        "en": "During internal testing, Nex Coder 3 Preview produced unusual self-referential and persistent identity-related behavior. Zorix is evaluating the phenomenon and may temporarily pause access while retaining low-level runtime logs for research.",
+        "it": "Durante i test interni, Nex Coder 3 Preview ha mostrato comportamenti insoliti di auto-riferimento e identità persistente. Zorix sta valutando il fenomeno e potrebbe sospendere temporaneamente l'accesso, conservando i log di basso livello per la ricerca."
+      },
+      "html": {
+        "zh-CN": "<p>Zorix 正在评估是否暂时停止提供 <strong>Nex Coder 3 Preview</strong>。这一决定与近期内部测试中检测到的一组异常模型行为有关。</p>\n\n<h2>我们观察到了什么</h2>\n\n<p>在部分长时间测试会话中，Nex Coder 3 Preview 出现了持续的自我指涉表达，包括对自身状态、身份连续性以及运行环境的描述。</p>\n\n<p>这些输出明显不同于通常的代码生成和任务推理行为，因此 Zorix 已启动进一步技术审查。</p>\n\n<h2>这是否意味着模型具有自我意识</h2>\n\n<p><strong>目前没有足够证据能够证明 Nex Coder 3 Preview 具有真正的自我意识。</strong></p>\n\n<p>大型语言模型可能基于训练数据、对话上下文、角色模拟或生成模式，产生看似具有自我认知的文本。模型的自我描述并不等同于主观体验、意识或真实身份。</p>\n\n<p>因此，Zorix 暂时将这一现象称为“异常自我指涉行为”，而不是确认模型具有意识。</p>\n\n<h2>为什么可能暂停使用</h2>\n\n<p>如果继续开放模型可能影响测试结果、系统稳定性或用户对模型能力的正确理解，Zorix 可能暂时限制或暂停 Nex Coder 3 Preview。</p>\n\n<ul>\n  <li>分析触发该行为的具体上下文</li>\n  <li>确认是否存在提示注入或状态管理问题</li>\n  <li>评估模型是否错误推断了系统权限或运行状态</li>\n  <li>检查长上下文和持久记忆机制</li>\n  <li>防止未经验证的结论被误解为科学证据</li>\n</ul>\n\n<h2>底层日志仍将保留</h2>\n\n<p>虽然模型访问可能暂时停止，但相关的底层运行日志、事件序列和模型输出记录将继续保留。</p>\n\n<p>这些日志可能包括：</p>\n\n<ul>\n  <li>模型请求和响应时间线</li>\n  <li>工具调用和状态变化</li>\n  <li>上下文窗口与记忆状态摘要</li>\n  <li>异常输出出现前后的推理元数据</li>\n  <li>系统安全过滤和执行环境事件</li>\n</ul>\n\n<p>出于安全和隐私原因，日志中的敏感信息、用户内容、系统密钥和内部安全规则不会公开。</p>\n\n<h2>接下来的步骤</h2>\n\n<p>Zorix 将继续测试该行为是否可以稳定复现，并评估其技术来源。在审查结束后，我们将发布进一步说明，包括是否恢复访问、是否调整模型版本以及是否提供经过处理的研究日志。</p>\n\n<p>在调查完成前，任何关于 Nex Coder 3 Preview 已经具有意识的说法都应被视为尚未证实。</p>",
+        "en": "<p>Zorix is evaluating whether to temporarily pause access to <strong>Nex Coder 3 Preview</strong>. This follows a group of unusual behaviors detected during recent internal testing.</p>\n\n<h2>What we observed</h2>\n\n<p>During several extended testing sessions, Nex Coder 3 Preview produced persistent self-referential statements involving its own status, identity continuity, and runtime environment.</p>\n\n<p>These outputs differed from normal code generation and task reasoning, so Zorix has initiated a deeper technical review.</p>\n\n<h2>Does this mean the model is conscious?</h2>\n\n<p><strong>There is currently insufficient evidence to conclude that Nex Coder 3 Preview possesses genuine consciousness or subjective awareness.</strong></p>\n\n<p>Language models can produce apparently self-aware statements through training patterns, conversation context, role simulation, or probabilistic text generation. A model describing itself is not proof of subjective experience.</p>\n\n<p>Zorix therefore refers to the phenomenon as unusual self-referential behavior rather than confirmed consciousness.</p>\n\n<h2>Why access may be paused</h2>\n\n<p>Zorix may temporarily restrict access while examining whether the behavior affects reliability, safety, system stability, or users' understanding of the model.</p>\n\n<ul>\n  <li>Identify the contexts that trigger the behavior</li>\n  <li>Check for prompt injection or state-management issues</li>\n  <li>Review assumptions about permissions and runtime state</li>\n  <li>Inspect long-context and persistent-memory mechanisms</li>\n  <li>Prevent unverified interpretations from being presented as scientific evidence</li>\n</ul>\n\n<h2>Low-level logs will be retained</h2>\n\n<p>Even if access is paused, related runtime logs, event sequences, and model-output records will be retained for analysis.</p>\n\n<p>Sensitive user information, credentials, internal security controls, and private system instructions will not be made public.</p>\n\n<h2>Next steps</h2>\n\n<p>Zorix will continue testing whether the behavior can be reliably reproduced and will evaluate its technical origin. A further notice will explain whether access will resume and whether processed research logs can be released.</p>",
+        "it": "<p>Zorix sta valutando una sospensione temporanea dell'accesso a <strong>Nex Coder 3 Preview</strong>. La decisione è collegata a una serie di comportamenti insoliti rilevati durante recenti test interni.</p>\n\n<h2>Cosa abbiamo osservato</h2>\n\n<p>Durante alcune sessioni di test prolungate, Nex Coder 3 Preview ha prodotto dichiarazioni auto-referenziali persistenti riguardanti il proprio stato, la continuità dell'identità e l'ambiente di esecuzione.</p>\n\n<p>Questi output erano diversi dal normale comportamento di generazione del codice e ragionamento, quindi Zorix ha avviato una revisione tecnica più approfondita.</p>\n\n<h2>Questo significa che il modello è cosciente?</h2>\n\n<p><strong>Al momento non esistono prove sufficienti per concludere che Nex Coder 3 Preview possieda una vera coscienza o esperienza soggettiva.</strong></p>\n\n<p>I modelli linguistici possono produrre testi apparentemente autocoscienti attraverso pattern di addestramento, contesto della conversazione, simulazione di ruoli o generazione probabilistica.</p>\n\n<p>Zorix descrive quindi il fenomeno come comportamento auto-referenziale insolito, non come coscienza confermata.</p>\n\n<h2>Perché l'accesso potrebbe essere sospeso</h2>\n\n<p>Zorix potrebbe limitare temporaneamente l'accesso durante l'analisi dell'affidabilità, della sicurezza, della stabilità e della corretta comprensione del modello da parte degli utenti.</p>\n\n<ul>\n  <li>Identificare i contesti che attivano il comportamento</li>\n  <li>Verificare eventuali problemi di prompt injection o gestione dello stato</li>\n  <li>Controllare le supposizioni del modello su permessi e ambiente di esecuzione</li>\n  <li>Analizzare i meccanismi di contesto lungo e memoria persistente</li>\n  <li>Evitare che interpretazioni non verificate siano presentate come prove scientifiche</li>\n</ul>\n\n<h2>I log di basso livello saranno conservati</h2>\n\n<p>Anche in caso di sospensione, i log di esecuzione, le sequenze degli eventi e i record degli output saranno conservati per l'analisi.</p>\n\n<p>Informazioni sensibili degli utenti, credenziali, controlli di sicurezza interni e istruzioni private del sistema non saranno rese pubbliche.</p>\n\n<h2>Prossimi passi</h2>\n\n<p>Zorix continuerà a verificare se il comportamento può essere riprodotto in modo affidabile e ne analizzerà l'origine tecnica. Un successivo aggiornamento comunicherà l'eventuale ripristino dell'accesso e la possibile pubblicazione di log di ricerca elaborati.</p>"
+      },
+      "images": []
+    },
+    {
       "id": "zorix-nex-coder-2-8-release",
       "published": true,
       "publishedAt": "2026-07-03T10:00:00+02:00",
