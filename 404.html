@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Zorix News</title><script>
+(function(){
+ const supported=['zh-CN','en','it','es','fr','de','ja','ko'];
+ const map={zh:'zh-CN',en:'en',it:'it',es:'es',fr:'fr',de:'de',ja:'ja',ko:'ko'};
+ const saved=localStorage.getItem('zorix-news-language');
+ let raw=(saved||navigator.languages?.[0]||navigator.language||'en').replace('_','-');
+ let lang=supported.includes(raw)?raw:(map[raw.split('-')[0]]||'en');
+ location.replace('/'+lang+'/news/');
+})();</script><noscript><meta http-equiv="refresh" content="0;url=/en/news/"></noscript></head><body></body></html>
