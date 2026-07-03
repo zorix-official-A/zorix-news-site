@@ -104,7 +104,7 @@
       "publishedAt": "2026-07-03T10:00:00+02:00",
       "updatedAt": "2026-07-03T10:00:00+02:00",
       "cover": {
-        "src": "assets/zorix.png",
+        "src": "/assets/zorix.png",
         "alt": {
           "zh-CN": "Zorix Nex Coder 2.8 发布封面",
           "en": "Zorix Nex Coder 2.8 release cover",
@@ -133,7 +133,7 @@
       },
       "images": [
         {
-          "src": "assets/zorix.png",
+          "src": "/assets/zorix.png",
           "alt": {
             "zh-CN": "Zorix Nex Coder 产品界面展示",
             "en": "Zorix Nex Coder product interface showcase",
