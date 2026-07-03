@@ -1,0 +1,53 @@
+{
+  "news": [
+    {
+      "id": "zorix-example-news",
+      "published": true,
+      "publishedAt": "2026-07-03T12:00:00+02:00",
+      "updatedAt": "2026-07-03T13:30:00+02:00",
+      "category": {
+        "zh-CN": "产品公告",
+        "en": "Product",
+        "it": "Prodotto"
+      },
+      "title": {
+        "zh-CN": "Zorix 新闻页面正式上线",
+        "en": "Zorix News is now available",
+        "it": "Zorix News è ora disponibile"
+      },
+      "summary": {
+        "zh-CN": "这是摘要，可使用多语言字段。",
+        "en": "This is a multilingual summary.",
+        "it": "Questo è un riepilogo multilingue."
+      },
+      "html": {
+        "zh-CN": "<p>这里可以直接使用<strong>受信任的 HTML</strong>。</p><p>支持标题、链接、列表、代码块等常见元素。</p>",
+        "en": "<p>You can render <strong>trusted HTML</strong> here.</p>",
+        "it": "<p>Qui puoi visualizzare <strong>HTML attendibile</strong>.</p>"
+      },
+      "images": [
+        {
+          "src": "assets/news/example.jpg",
+          "alt": {
+            "zh-CN": "Zorix 新闻配图",
+            "en": "Zorix News image",
+            "it": "Immagine Zorix News"
+          },
+          "caption": {
+            "zh-CN": "图片说明",
+            "en": "Image caption",
+            "it": "Didascalia"
+          }
+        },
+        {
+          "src": "assets/news/detail.png",
+          "alt": {
+            "zh-CN": "新闻详情图",
+            "en": "News detail image",
+            "it": "Immagine di dettaglio"
+          }
+        }
+      ]
+    }
+  ]
+}

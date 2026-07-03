@@ -1,0 +1,31 @@
+{
+  "news": [
+    {
+      "id": "zorix-nex-coder-2-8-release",
+      "published": true,
+      "publishedAt": "2026-07-03T10:00:00+02:00",
+      "updatedAt": "2026-07-03T10:00:00+02:00",
+      "category": {
+        "zh-CN": "产品发布",
+        "en": "Product Release",
+        "it": "Rilascio Prodotto"
+      },
+      "title": {
+        "zh-CN": "Zorix 正式发布 Nex Coder 2.8",
+        "en": "Zorix Releases Nex Coder 2.8",
+        "it": "Zorix Rilascia Nex Coder 2.8"
+      },
+      "summary": {
+        "zh-CN": "Zorix 宣布 Nex Coder 2.8 版本正式上线，带来性能优化、新功能增强及开发者体验提升。",
+        "en": "Zorix announces the official release of Nex Coder 2.8, featuring performance optimizations, new enhancements, and improved developer experience.",
+        "it": "Zorix annuncia il rilascio ufficiale di Nex Coder 2.8, con ottimizzazioni delle prestazioni, nuove funzionalità e migliore esperienza per gli sviluppatori."
+      },
+      "html": {
+        "zh-CN": "<p>Zorix 很高兴宣布 <strong>Nex Coder 2.8</strong> 正式发布。此次更新聚焦于提升编码效率与系统稳定性，为开发者提供更流畅的智能编程体验。</p><ul><li><strong>性能提升：</strong> 核心引擎重构，代码补全响应速度提升约 30%。</li><li><strong>新功能：</strong> 新增多文件上下文理解，支持跨文件引用自动补全。</li><li><strong>优化：</strong> 改进了代码审查建议的准确性，减少误报率。</li><li><strong>兼容性：</strong> 扩展了对 Python 3.12 及 TypeScript 5.6 的深度支持。</li></ul><p>用户可以通过 Zorix 官方平台或 IDE 插件市场直接更新至最新版本。详细更新日志请访问 Zorix 文档中心。</p>",
+        "en": "<p>Zorix is pleased to announce the official release of <strong>Nex Coder 2.8</strong>. This release focuses on improving coding efficiency and system stability, delivering a smoother intelligent programming experience for developers.</p><ul><li><strong>Performance Boost:</strong> Core engine refactored, code completion response speed improved by approximately 30%.</li><li><strong>New Feature:</strong> Multi-file context understanding added, supporting cross-file reference auto-completion.</li><li><strong>Optimization:</strong> Enhanced accuracy of code review suggestions with reduced false positive rates.</li><li><strong>Compatibility:</strong> Extended deep support for Python 3.12 and TypeScript 5.6.</li></ul><p>Users can update to the latest version directly via the Zorix official platform or IDE plugin marketplace. For detailed release notes, please visit the Zorix Documentation Center.</p>",
+        "it": "<p>Zorix è lieta di annunciare il rilascio ufficiale di <strong>Nex Coder 2.8</strong>. Questo aggiornamento si concentra sul miglioramento dell'efficienza di codifica e della stabilità del sistema, offrendo un'esperienza di programmazione intelligente più fluida per gli sviluppatori.</p><ul><li><strong>Miglioramento delle prestazioni:</strong> Motore principale riprogettato, velocità di risposta del completamento del codice migliorata di circa il 30%.</li><li><strong>Nuova funzionalità:</strong> Aggiunta la comprensione del contesto multi-file, con supporto per il completamento automatico di riferimenti tra file.</li><li><strong>Ottimizzazione:</strong> Migliorata l'accuratezza dei suggerimenti di revisione del codice con riduzione dei falsi positivi.</li><li><strong>Compatibilità:</strong> Esteso il supporto avanzato per Python 3.12 e TypeScript 5.6.</li></ul><p>Gli utenti possono aggiornare all'ultima versione direttamente tramite la piattaforma ufficiale Zorix o il mercato dei plugin IDE. Per le note di rilascio dettagliate, visitare il Centro Documentazione Zorix.</p>"
+      },
+      "images": []
+    }
+  ]
+}
