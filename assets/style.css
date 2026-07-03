@@ -524,3 +524,19 @@ h1 {
     font-size: 22px;
   }
 }
+
+
+/* REMOVE NEWSROOM CATEGORIES V4 */
+.newsroom-controls,
+.newsroom-categories,
+.newsroom-tools {
+  display: none !important;
+}
+
+.news-panel {
+  margin-top: 18px;
+}
+
+.news-grid {
+  padding-top: 0;
+}
