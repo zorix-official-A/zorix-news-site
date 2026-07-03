@@ -25,3 +25,16 @@
 ## 地区与语言
 
 GitHub Pages 无法直接读取 `CF-IPCountry`。根页面使用浏览器语言跳转；`functions/index.js` 可在 Cloudflare Pages 中使用地区头跳转。
+
+## 新闻封面与正文页
+
+列表页只显示封面、标题、摘要和日期。点击封面或标题后，会通过 `?article=新闻ID` 打开正文视图。
+
+封面优先级：`cover` → `image` → `images[0]`。推荐在每条新闻中加入：
+
+```json
+"cover": {
+  "src": "assets/news/example.jpg",
+  "alt": { "zh-CN": "新闻封面", "en": "News cover", "it": "Copertina" }
+}
+```

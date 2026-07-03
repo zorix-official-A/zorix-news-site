@@ -23,7 +23,7 @@
   // Resolve files from the actual app.js URL, so GitHub Pages repository paths
   // and custom domains both work reliably.
   const scriptUrl = document.currentScript?.src || new URL('../../assets/app.js', window.location.href).href;
-  const siteRoot = new URL('../../', scriptUrl);
+  const siteRoot = new URL('../', scriptUrl);
   const dataUrl = new URL('data/news.json', siteRoot).href;
 
   const language = document.documentElement.lang || 'en';
@@ -74,25 +74,61 @@
     return `<figure class="news-media"><img src="${escapeHtml(resolveAsset(source))}" alt="${escapeHtml(alt || title || t.imageAlt)}" loading="lazy" decoding="async">${caption ? `<figcaption>${escapeHtml(caption)}</figcaption>` : ''}</figure>`;
   };
 
-  const renderArticle = article => {
+  const articleUrl = article => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('article', article.id || '');
+    url.hash = '';
+    return url.href;
+  };
+
+  const coverOf = article => {
+    if (article.cover) return article.cover;
+    if (article.image) return article.image;
+    return Array.isArray(article.images) && article.images.length ? article.images[0] : null;
+  };
+
+  const renderCard = article => {
+    const title = localized(article.title);
+    const summary = localized(article.summary || article.excerpt);
+    const category = localized(article.category);
+    const published = formatDate(article.publishedAt || article.date);
+    const cover = coverOf(article);
+    const href = articleUrl(article);
+    return `<article class="news-tile">
+      <a class="news-tile-cover" href="${escapeHtml(href)}" aria-label="${escapeHtml(title)}">
+        ${cover ? renderImage(cover, title) : `<div class="news-cover-placeholder" aria-hidden="true"><span>ZORIX</span></div>`}
+      </a>
+      <div class="news-tile-copy">
+        <a class="news-title-link" href="${escapeHtml(href)}"><h2>${escapeHtml(title)}</h2></a>
+        ${summary ? `<p class="news-tile-summary">${escapeHtml(summary)}</p>` : ''}
+        <div class="news-tile-meta">${category ? `<span>${escapeHtml(category)}</span>` : ''}${published ? `<time datetime="${escapeHtml(article.publishedAt || article.date)}">${escapeHtml(published)}</time>` : ''}</div>
+      </div>
+    </article>`;
+  };
+
+  const renderDetail = article => {
     const title = localized(article.title);
     const summary = localized(article.summary || article.excerpt);
     const html = localized(article.html || article.contentHtml);
     const text = localized(article.content || article.text);
     const category = localized(article.category);
     const images = Array.isArray(article.images) ? article.images : (article.image ? [article.image] : []);
+    const cover = coverOf(article);
     const published = formatDate(article.publishedAt || article.date);
     const updated = formatDate(article.updatedAt);
-    const id = escapeHtml(article.id || '');
-    return `<article class="news-card" ${id ? `id="${id}"` : ''}>
-      ${images[0] ? renderImage(images[0], title) : ''}
-      <div class="news-card-body">
-        <div class="news-meta">${category ? `<span class="news-category">${escapeHtml(category)}</span>` : ''}${published ? `<time datetime="${escapeHtml(article.publishedAt || article.date)}">${escapeHtml(t.published)} ${escapeHtml(published)}</time>` : ''}${updated ? `<span>${escapeHtml(t.updated)} ${escapeHtml(updated)}</span>` : ''}</div>
-        ${title ? `<h2>${escapeHtml(title)}</h2>` : ''}
-        ${summary ? `<p class="news-summary">${escapeHtml(summary)}</p>` : ''}
-        ${html ? `<div class="news-content rich-content">${html}</div>` : (text ? `<div class="news-content">${escapeHtml(text).replace(/\n/g, '<br>')}</div>` : '')}
-        ${images.slice(1).map(image => renderImage(image, title)).join('')}
-      </div>
+    const listUrl = new URL(window.location.href); listUrl.searchParams.delete('article'); listUrl.hash = '';
+    const extraImages = images.filter((_, i) => !(cover && i === 0));
+    return `<article class="article-page">
+      <a class="article-back" href="${escapeHtml(listUrl.href)}" aria-label="Back"><span aria-hidden="true">←</span>${escapeHtml(language === 'zh-CN' ? '返回新闻' : language === 'it' ? 'Torna alle notizie' : 'Back to news')}</a>
+      <header class="article-header">
+        <div class="article-meta">${category ? `<span>${escapeHtml(category)}</span>` : ''}${published ? `<time datetime="${escapeHtml(article.publishedAt || article.date)}">${escapeHtml(published)}</time>` : ''}</div>
+        <h1>${escapeHtml(title)}</h1>
+        ${summary ? `<p>${escapeHtml(summary)}</p>` : ''}
+        ${updated ? `<div class="article-updated">${escapeHtml(t.updated)} ${escapeHtml(updated)}</div>` : ''}
+      </header>
+      ${cover ? `<div class="article-hero">${renderImage(cover, title)}</div>` : ''}
+      <div class="article-body rich-content">${html || (text ? escapeHtml(text).replace(/\n/g, '<br>') : '')}</div>
+      ${extraImages.length ? `<div class="article-gallery">${extraImages.map(image => renderImage(image, title)).join('')}</div>` : ''}
     </article>`;
   };
 
@@ -105,7 +141,13 @@
     .then(data => {
       const items = Array.isArray(data) ? data : (Array.isArray(data.news) ? data.news : []);
       const visible = items.filter(item => item && item.published !== false).sort((a, b) => new Date(b.publishedAt || b.date || 0) - new Date(a.publishedAt || a.date || 0));
-      newsRoot.innerHTML = visible.length ? `<div class="news-list">${visible.map(renderArticle).join('')}</div>` : state(t.emptyTitle, t.emptyText);
+      const selectedId = new URL(window.location.href).searchParams.get('article');
+      const selected = selectedId ? visible.find(item => String(item.id) === selectedId) : null;
+      if (selectedId && !selected) {
+        newsRoot.innerHTML = state(t.errorTitle, language === 'zh-CN' ? '未找到这篇新闻。' : 'Article not found.');
+        return;
+      }
+      newsRoot.innerHTML = selected ? renderDetail(selected) : (visible.length ? `<div class="news-grid">${visible.map(renderCard).join('')}</div>` : state(t.emptyTitle, t.emptyText));
     })
     .catch(error => {
       console.error('Zorix News JSON error:', error, 'URL:', dataUrl);
