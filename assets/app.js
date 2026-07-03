@@ -40,6 +40,92 @@
   };
   const t = dictionary[language] || dictionary[language.split('-')[0]] || dictionary.en;
 
+
+  // ZORIX_NEWSROOM_TOOLBAR_V3
+  const newsroomLabels = {
+    'zh-CN': {
+      all: '全部',
+      company: '公司',
+      research: '研究',
+      product: '产品',
+      safety: '安全',
+      engineering: '工程',
+      filter: '筛选',
+      sort: '最新发布',
+      grid: '网格视图',
+      list: '列表视图'
+    },
+    en: {
+      all: 'All',
+      company: 'Company',
+      research: 'Research',
+      product: 'Product',
+      safety: 'Safety',
+      engineering: 'Engineering',
+      filter: 'Filter',
+      sort: 'Newest',
+      grid: 'Grid view',
+      list: 'List view'
+    },
+    it: {
+      all: 'Tutto',
+      company: 'Azienda',
+      research: 'Ricerca',
+      product: 'Prodotti',
+      safety: 'Sicurezza',
+      engineering: 'Ingegneria',
+      filter: 'Filtra',
+      sort: 'Più recenti',
+      grid: 'Vista griglia',
+      list: 'Vista elenco'
+    }
+  };
+
+  const newsroomText =
+    newsroomLabels[language] ||
+    newsroomLabels[language.split('-')[0]] ||
+    newsroomLabels.en;
+
+  const newsroomControls = document.createElement('div');
+  newsroomControls.className = 'newsroom-controls';
+  newsroomControls.innerHTML = `
+    <nav class="newsroom-categories" aria-label="News categories">
+      <button class="newsroom-category active" type="button" data-news-category="all">${newsroomText.all}</button>
+      <button class="newsroom-category" type="button" data-news-category="company">${newsroomText.company}</button>
+      <button class="newsroom-category" type="button" data-news-category="research">${newsroomText.research}</button>
+      <button class="newsroom-category" type="button" data-news-category="product">${newsroomText.product}</button>
+      <button class="newsroom-category" type="button" data-news-category="safety">${newsroomText.safety}</button>
+      <button class="newsroom-category" type="button" data-news-category="engineering">${newsroomText.engineering}</button>
+    </nav>
+    <div class="newsroom-tools">
+      <div class="newsroom-tool-group">
+        <button class="newsroom-tool" type="button" data-news-filter>${newsroomText.filter}</button>
+        <button class="newsroom-tool" type="button" data-news-sort>${newsroomText.sort}</button>
+      </div>
+      <div class="newsroom-tool-group">
+        <button class="newsroom-tool newsroom-tool-muted" type="button" data-view="grid" aria-label="${newsroomText.grid}">▦</button>
+        <button class="newsroom-tool" type="button" data-view="list" aria-label="${newsroomText.list}">☰</button>
+      </div>
+    </div>
+  `;
+
+  newsRoot.parentNode.insertBefore(newsroomControls, newsRoot);
+
+  newsroomControls.querySelectorAll('[data-view]').forEach(viewButton => {
+    viewButton.addEventListener('click', () => {
+      const grid = newsRoot.querySelector('.news-grid');
+      if (!grid) return;
+
+      const useGrid = viewButton.dataset.view === 'grid';
+      grid.classList.toggle('grid-view', useGrid);
+
+      newsroomControls.querySelectorAll('[data-view]').forEach(button => {
+        button.classList.toggle('newsroom-tool-muted', button !== viewButton);
+      });
+    });
+  });
+
+
   const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
   const localized = value => {
     if (value == null) return '';
