@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f7f5">
+
+  <title>Zorix Nex 2.8 Coder：面向复杂开发任务的新一代编码模型</title>
+
+  <meta
+    name="description"
+    content="Zorix Nex 2.8 Coder 是面向代码生成、项目理解、调试、重构和复杂工程任务的新一代 AI 编程模型。"
+  >
+
+  <meta property="og:title" content="Zorix Nex 2.8 Coder">
+  <meta
+    property="og:description"
+    content="更深入地理解代码库，更高效地完成复杂开发任务。"
+  >
+  <meta property="og:type" content="article">
+  <meta
+    property="og:url"
+    content="https://news.zorix.it/zh-CN/nex-coder-2.8/"
+  >
+  <meta
+    property="og:image"
+    content="https://news.zorix.it/assets/zorix.png"
+  >
+
+  <link
+    rel="canonical"
+    href="https://news.zorix.it/zh-CN/nex-coder-2.8/"
+  >
+
+  <style>
+    :root {
+      --background: #f7f7f5;
+      --surface: #ffffff;
+      --text: #101010;
+      --muted: #656565;
+      --soft: #8b8b8b;
+      --line: #deded9;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --teal: #14b8a6;
+      --green: #22c55e;
+      --max-width: 1440px;
+      --content-width: 880px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--background);
+      font-family:
+        "Noto Sans SC",
+        "PingFang SC",
+        "Microsoft YaHei",
+        "Helvetica Neue",
+        Arial,
+        system-ui,
+        -apple-system,
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .page {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .header {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background: rgba(247, 247, 245, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .header-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-logo {
+      width: 38px;
+      height: 38px;
+      display: block;
+    }
+
+    .brand-name {
+      font-size: 21px;
+      line-height: 1;
+      font-weight: 680;
+      letter-spacing: -0.035em;
+    }
+
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex: 1;
+    }
+
+    .desktop-nav a {
+      text-decoration: none;
+      font-size: 15px;
+      color: #343434;
+      transition: opacity 0.18s ease;
+    }
+
+    .desktop-nav a:hover {
+      opacity: 0.58;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .header-button {
+      min-height: 38px;
+      padding: 0 18px;
+      border: 1px solid #cfcfca;
+      border-radius: 999px;
+      background: transparent;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      transition:
+        background 0.18s ease,
+        color 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .header-button.primary {
+      color: white;
+      border-color: #111;
+      background: #111;
+    }
+
+    .header-button:hover {
+      background: #e9e9e5;
+    }
+
+    .header-button.primary:hover {
+      background: #343434;
+    }
+
+    .menu-button {
+      width: 42px;
+      height: 42px;
+      display: none;
+      place-items: center;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .menu-button svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    main {
+      padding-top: 72px;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 720px;
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-background {
+      position: absolute;
+      inset: 0;
+      z-index: -3;
+      background:
+        radial-gradient(
+          circle at 70% 52%,
+          rgba(6, 182, 212, 0.14),
+          transparent 23%
+        ),
+        radial-gradient(
+          circle at 78% 42%,
+          rgba(34, 197, 94, 0.12),
+          transparent 27%
+        ),
+        linear-gradient(
+          160deg,
+          #f7f7f5 0%,
+          #eef7f5 55%,
+          #edf4fb 100%
+        );
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      opacity: 0.42;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.035) 1px, transparent 1px),
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.035) 1px,
+          transparent 1px
+        );
+      background-size: 36px 36px;
+      mask-image:
+        linear-gradient(to bottom, transparent, black 18%, black 80%, transparent);
+    }
+
+    .ascii-field {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      overflow: hidden;
+      color: rgba(16, 16, 16, 0.12);
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+      font-size: 11px;
+      line-height: 1.18;
+      letter-spacing: 0.04em;
+      white-space: pre;
+      user-select: none;
+      pointer-events: none;
+      animation: fieldFloat 18s ease-in-out infinite alternate;
+    }
+
+    .ascii-field pre {
+      position: absolute;
+      margin: 0;
+    }
+
+    .ascii-field .code-one {
+      top: 110px;
+      left: 4%;
+    }
+
+    .ascii-field .code-two {
+      right: 3%;
+      bottom: 80px;
+      text-align: right;
+    }
+
+    .coder-core {
+      position: absolute;
+      right: clamp(30px, 8vw, 140px);
+      top: 50%;
+      width: min(44vw, 560px);
+      aspect-ratio: 1;
+      transform: translateY(-48%);
+      display: grid;
+      place-items: center;
+      pointer-events: none;
+    }
+
+    .core-ring {
+      position: absolute;
+      inset: 4%;
+      border: 1px solid rgba(37, 99, 235, 0.24);
+      border-radius: 50%;
+      animation: spin 28s linear infinite;
+    }
+
+    .core-ring::before,
+    .core-ring::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .core-ring::before {
+      width: 13px;
+      height: 13px;
+      top: 11%;
+      left: 17%;
+      background: var(--cyan);
+      box-shadow: 0 0 28px rgba(6, 182, 212, 0.8);
+    }
+
+    .core-ring::after {
+      width: 10px;
+      height: 10px;
+      right: 10%;
+      bottom: 18%;
+      background: var(--green);
+      box-shadow: 0 0 24px rgba(34, 197, 94, 0.72);
+    }
+
+    .core-ring.second {
+      inset: 18%;
+      border-color: rgba(20, 184, 166, 0.22);
+      animation-duration: 19s;
+      animation-direction: reverse;
+    }
+
+    .core-ring.third {
+      inset: 31%;
+      border-color: rgba(37, 99, 235, 0.2);
+      animation-duration: 13s;
+    }
+
+    .core-object {
+      position: relative;
+      width: 42%;
+      aspect-ratio: 1;
+      border-radius: 34%;
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(37, 99, 235, 0.96),
+          rgba(6, 182, 212, 0.92) 48%,
+          rgba(34, 197, 94, 0.92)
+        );
+      box-shadow:
+        0 36px 100px rgba(37, 99, 235, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+      transform: rotate(-8deg);
+      animation: coreFloat 6s ease-in-out infinite;
+    }
+
+    .core-object::before {
+      content: "";
+      position: absolute;
+      inset: -18%;
+      border-radius: 40%;
+      background:
+        radial-gradient(
+          circle,
+          rgba(6, 182, 212, 0.2),
+          transparent 68%
+        );
+      filter: blur(20px);
+      z-index: -1;
+    }
+
+    .core-z {
+      width: 53%;
+      height: 53%;
+      filter: drop-shadow(0 9px 14px rgba(0, 0, 0, 0.12));
+    }
+
+    .hero-content {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 140px 0 70px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      position: relative;
+      z-index: 3;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 28px;
+      color: #4a4a4a;
+      font-size: 14px;
+      font-weight: 540;
+    }
+
+    .tag::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, var(--blue), var(--green));
+      box-shadow: 0 0 0 5px rgba(6, 182, 212, 0.1);
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 740px;
+      font-size: clamp(58px, 8vw, 112px);
+      line-height: 0.91;
+      font-weight: 520;
+      letter-spacing: -0.068em;
+    }
+
+    .hero h1 span {
+      display: block;
+    }
+
+    .hero-subtitle {
+      max-width: 680px;
+      margin: 34px 0 0;
+      color: #464646;
+      font-size: clamp(19px, 2vw, 25px);
+      line-height: 1.48;
+      letter-spacing: -0.015em;
+    }
+
+    .hero-actions {
+      margin-top: 38px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .action {
+      min-height: 50px;
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid #bebeba;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.28);
+      backdrop-filter: blur(10px);
+      transition:
+        transform 0.18s ease,
+        background 0.18s ease;
+    }
+
+    .action.primary {
+      color: #fff;
+      border-color: #111;
+      background: #111;
+    }
+
+    .action:hover {
+      transform: translateY(-2px);
+      background: white;
+    }
+
+    .action.primary:hover {
+      background: #333;
+    }
+
+    .action svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    .release-meta {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 23px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: #666;
+      font-size: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .release-meta strong {
+      color: #161616;
+      font-weight: 560;
+    }
+
+    .intro-section {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 110px 0;
+      display: grid;
+      grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+      gap: 110px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: #777;
+      font-size: 14px;
+      font-weight: 540;
+    }
+
+    .intro-lead {
+      margin: 0;
+      max-width: 850px;
+      font-size: clamp(30px, 4vw, 54px);
+      line-height: 1.16;
+      font-weight: 470;
+      letter-spacing: -0.046em;
+    }
+
+    .content-section {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 110px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      max-width: 850px;
+      margin: 0 0 66px;
+      font-size: clamp(40px, 6vw, 76px);
+      line-height: 1.02;
+      font-weight: 490;
+      letter-spacing: -0.055em;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .feature-card {
+      min-height: 360px;
+      padding: 32px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.55);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:
+        transform 0.22s ease,
+        border-color 0.22s ease,
+        background 0.22s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: #bcbcb5;
+      background: white;
+    }
+
+    .feature-number {
+      color: #858585;
+      font-size: 13px;
+    }
+
+    .feature-card h3 {
+      margin: 0 0 17px;
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 530;
+      letter-spacing: -0.035em;
+    }
+
+    .feature-card p {
+      margin: 0;
+      color: #626262;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .dark-section {
+      color: #f4f4f0;
+      background: #111;
+    }
+
+    .dark-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 120px 0;
+    }
+
+    .dark-heading {
+      max-width: 900px;
+      margin: 0;
+      font-size: clamp(42px, 7vw, 88px);
+      line-height: 1.01;
+      font-weight: 470;
+      letter-spacing: -0.058em;
+    }
+
+    .terminal {
+      margin-top: 72px;
+      border: 1px solid #303030;
+      border-radius: 18px;
+      overflow: hidden;
+      background: #080808;
+      box-shadow: 0 40px 100px rgba(0, 0, 0, 0.3);
+    }
+
+    .terminal-bar {
+      height: 46px;
+      padding: 0 18px;
+      border-bottom: 1px solid #292929;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .terminal-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #3a3a3a;
+    }
+
+    .terminal-title {
+      margin-left: 8px;
+    }
+
+    .terminal-body {
+      padding: 28px;
+      min-height: 440px;
+      overflow: auto;
+      color: #d6d8d7;
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .terminal-line {
+      display: block;
+      white-space: pre-wrap;
+    }
+
+    .prompt {
+      color: #29d49f;
+    }
+
+    .command {
+      color: #f4f4f0;
+    }
+
+    .answer {
+      color: #9ca3af;
+    }
+
+    .code {
+      color: #78dce8;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 8px;
+      height: 16px;
+      margin-left: 3px;
+      vertical-align: -3px;
+      background: #f5f5f5;
+      animation: blink 0.9s step-end infinite;
+    }
+
+    .benchmark-grid {
+      margin-top: 72px;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid #343434;
+      border-left: 1px solid #343434;
+    }
+
+    .benchmark {
+      min-height: 205px;
+      padding: 25px;
+      border-right: 1px solid #343434;
+      border-bottom: 1px solid #343434;
+    }
+
+    .benchmark-label {
+      color: #8f8f8f;
+      font-size: 13px;
+    }
+
+    .benchmark-value {
+      margin-top: 36px;
+      font-size: clamp(36px, 5vw, 62px);
+      line-height: 1;
+      font-weight: 480;
+      letter-spacing: -0.05em;
+    }
+
+    .benchmark-note {
+      margin-top: 14px;
+      color: #8f8f8f;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .article-section {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 115px 0;
+      display: grid;
+      grid-template-columns: 250px minmax(0, var(--content-width));
+      gap: 95px;
+      justify-content: center;
+    }
+
+    .article-index {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+    }
+
+    .article-index strong {
+      display: block;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 560;
+    }
+
+    .article-index a {
+      display: block;
+      padding: 7px 0;
+      color: #777;
+      text-decoration: none;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .article-index a:hover {
+      color: #111;
+    }
+
+    .article-body {
+      min-width: 0;
+      font-size: 18px;
+      line-height: 1.85;
+    }
+
+    .article-body h2 {
+      margin: 78px 0 22px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.12;
+      font-weight: 520;
+      letter-spacing: -0.04em;
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h3 {
+      margin: 46px 0 17px;
+      font-size: 25px;
+      line-height: 1.25;
+      font-weight: 550;
+      letter-spacing: -0.025em;
+    }
+
+    .article-body p {
+      margin: 0 0 27px;
+      color: #303030;
+    }
+
+    .article-body ul {
+      margin: 0 0 30px;
+      padding-left: 24px;
+    }
+
+    .article-body li {
+      margin: 11px 0;
+      padding-left: 5px;
+    }
+
+    .article-body blockquote {
+      margin: 48px 0;
+      padding: 4px 0 4px 26px;
+      border-left: 3px solid var(--cyan);
+      font-size: 24px;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+
+    .article-body code {
+      padding: 2px 6px;
+      border-radius: 5px;
+      background: #ebebe7;
+      font-family:
+        "SFMono-Regular",
+        Consolas,
+        monospace;
+      font-size: 0.88em;
+    }
+
+    .cta {
+      color: white;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(34, 197, 94, 0.45),
+          transparent 34%
+        ),
+        radial-gradient(
+          circle at 20% 80%,
+          rgba(37, 99, 235, 0.45),
+          transparent 40%
+        ),
+        #101010;
+    }
+
+    .cta-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      min-height: 600px;
+      margin: 0 auto;
+      padding: 105px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .cta h2 {
+      max-width: 1000px;
+      margin: 0;
+      font-size: clamp(52px, 8vw, 106px);
+      line-height: 0.94;
+      font-weight: 470;
+      letter-spacing: -0.065em;
+    }
+
+    .cta-bottom {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .cta p {
+      max-width: 600px;
+      margin: 0;
+      color: #c9c9c5;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .cta .action {
+      border-color: white;
+      color: #111;
+      background: white;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      color: #c2c2bd;
+      background: #101010;
+      border-top: 1px solid #303030;
+    }
+
+    .footer-inner {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+      padding: 34px 0 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-size: 13px;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition:
+        opacity 0.75s ease,
+        transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes coreFloat {
+      0%,
+      100% {
+        transform: rotate(-8deg) translateY(0);
+      }
+
+      50% {
+        transform: rotate(-4deg) translateY(-14px);
+      }
+    }
+
+    @keyframes fieldFloat {
+      from {
+        transform: translate3d(-8px, -5px, 0);
+      }
+
+      to {
+        transform: translate3d(14px, 9px, 0);
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .desktop-nav,
+      .header-actions .secondary {
+        display: none;
+      }
+
+      .header-actions {
+        margin-left: auto;
+      }
+
+      .menu-button {
+        display: grid;
+      }
+
+      .mobile-menu {
+        position: fixed;
+        z-index: 49;
+        inset: 72px 0 0;
+        padding: 32px 24px;
+        background: var(--background);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transform: translateY(-120%);
+        transition: transform 0.28s ease;
+      }
+
+      .mobile-menu.open {
+        transform: translateY(0);
+      }
+
+      .mobile-menu a {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+        text-decoration: none;
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: -0.035em;
+      }
+
+      .intro-section {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-card {
+        min-height: 290px;
+      }
+
+      .benchmark-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .article-section {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .article-index {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .article-index strong {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .header-inner,
+      .hero-content,
+      .release-meta,
+      .intro-section,
+      .content-section,
+      .dark-inner,
+      .article-section,
+      .cta-inner,
+      .footer-inner {
+        width: calc(100% - 30px);
+      }
+
+      .header {
+        height: 66px;
+      }
+
+      .header-inner {
+        gap: 15px;
+      }
+
+      .brand-logo {
+        width: 34px;
+        height: 34px;
+      }
+
+      .brand-name {
+        font-size: 19px;
+      }
+
+      main {
+        padding-top: 66px;
+      }
+
+      .mobile-menu {
+        top: 66px;
+      }
+
+      .header-button.primary {
+        display: none;
+      }
+
+      .hero {
+        min-height: 720px;
+        align-items: flex-end;
+      }
+
+      .hero-content {
+        padding: 320px 0 48px;
+      }
+
+      .hero h1 {
+        font-size: clamp(54px, 16vw, 76px);
+        line-height: 0.94;
+      }
+
+      .hero-subtitle {
+        margin-top: 25px;
+        font-size: 18px;
+      }
+
+      .coder-core {
+        width: 420px;
+        max-width: 100vw;
+        right: -105px;
+        top: 29%;
+      }
+
+      .ascii-field {
+        font-size: 9px;
+      }
+
+      .release-meta {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .intro-section,
+      .content-section,
+      .dark-inner,
+      .article-section {
+        padding-top: 78px;
+        padding-bottom: 78px;
+      }
+
+      .intro-lead {
+        font-size: 34px;
+      }
+
+      .section-heading {
+        margin-bottom: 42px;
+        font-size: 46px;
+      }
+
+      .feature-card {
+        padding: 26px;
+      }
+
+      .dark-heading {
+        font-size: 49px;
+      }
+
+      .terminal {
+        margin-top: 48px;
+      }
+
+      .terminal-body {
+        min-height: 390px;
+        padding: 20px;
+        font-size: 12px;
+      }
+
+      .benchmark-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benchmark {
+        min-height: 170px;
+      }
+
+      .article-index {
+        grid-template-columns: 1fr;
+      }
+
+      .article-body {
+        font-size: 17px;
+        line-height: 1.82;
+      }
+
+      .article-body h2 {
+        margin-top: 62px;
+        font-size: 34px;
+      }
+
+      .article-body blockquote {
+        font-size: 21px;
+      }
+
+      .cta-inner {
+        min-height: 540px;
+      }
+
+      .cta h2 {
+        font-size: 58px;
+      }
+
+      .cta-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="https://zorix.it/" aria-label="Zorix 主页">
+          <svg
+            class="brand-logo"
+            width="160"
+            height="160"
+            viewBox="0 0 160 160"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient
+                id="headerCore"
+                x1="28"
+                y1="20"
+                x2="134"
+                y2="140"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0%" stop-color="#2563EB"/>
+                <stop offset="40%" stop-color="#06B6D4"/>
+                <stop offset="75%" stop-color="#14B8A6"/>
+                <stop offset="100%" stop-color="#22C55E"/>
+              </linearGradient>
+
+              <linearGradient
+                id="headerZ"
+                x1="48"
+                y1="46"
+                x2="112"
+                y2="114"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#ECFEFF"/>
+              </linearGradient>
+            </defs>
+
+            <rect
+              x="18"
+              y="18"
+              width="124"
+              height="124"
+              rx="36"
+              fill="url(#headerCore)"
+            />
+
+            <path
+              d="M48 50H112L91 74H107L55 113L78 86H52L73 62H48Z"
+              fill="url(#headerZ)"
+            />
+          </svg>
+
+          <span class="brand-name">Zorix</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="主导航">
+          <a href="#overview">概览</a>
+          <a href="#capabilities">能力</a>
+          <a href="#performance">性能</a>
+          <a href="#technical">技术说明</a>
+          <a href="https://news.zorix.it/zh-CN/news/">新闻</a>
+        </nav>
+
+        <div class="header-actions">
+          <a
+            class="header-button secondary"
+            href="https://news.zorix.it/zh-CN/news/"
+          >
+            返回新闻
+          </a>
+
+          <a
+            class="header-button primary"
+            href="https://zorix.it/chat"
+          >
+            试用 Zorix
+          </a>
+
+          <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-label="打开导航"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 7h16M4 12h16M4 17h16"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#overview">概览</a>
+      <a href="#capabilities">能力</a>
+      <a href="#performance">性能</a>
+      <a href="#technical">技术说明</a>
+      <a href="https://news.zorix.it/zh-CN/news/">Zorix 新闻</a>
+      <a href="https://zorix.it/chat">试用 Zorix</a>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-grid"></div>
+
+        <div class="ascii-field" aria-hidden="true">
+<pre class="code-one">
+const model = "zorix-nex-2.8-coder";
+const task = await model.analyze({
+  repository: project,
+  context: "full-codebase",
+  mode: "reasoning"
+});
+
+function buildReliableSoftware(input) {
+  understand(input);
+  plan();
+  implement();
+  test();
+  verify();
+}
+
+01 10 11 00 01 10 01 11
+src/components/Workspace.tsx
+src/server/index.js
+src/core/runtime.rs
+tests/integration/
+</pre>
+
+<pre class="code-two">
+&lt;ZorixCoder
+  reasoning="adaptive"
+  context="multi-file"
+  output="production-ready"
+/&gt;
+
+git diff --stat
+ 42 files changed
+ 1,284 insertions(+)
+ 319 deletions(-)
+
+analyze → plan → edit → test
+</pre>
+        </div>
+
+        <div class="coder-core" aria-hidden="true">
+          <div class="core-ring"></div>
+          <div class="core-ring second"></div>
+          <div class="core-ring third"></div>
+
+          <div class="core-object">
+            <svg
+              class="core-z"
+              viewBox="0 0 160 160"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M36 39H126L96 73H119L45 129L78 91H42L72 57H36Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="hero-content">
+          <div class="hero-copy">
+            <div class="tag">Zorix 模型发布</div>
+
+            <h1>
+              <span>Nex 2.8</span>
+              <span>Coder</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              面向复杂代码库、长时间开发任务和真实软件工程流程的新一代
+              Zorix 编程模型。
+            </p>
+
+            <div class="hero-actions">
+              <a class="action primary" href="https://zorix.it/chat">
+                立即体验
+                <svg viewBox="0 0 12 12" fill="none">
+                  <path
+                    d="M1.5 4.5h6v6M7.5 4.5l-6.5 6.5"
+                    stroke="currentColor"
+                    stroke-width="1.35"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+
+              <a class="action" href="#technical">
+                阅读技术说明
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="release-meta">
+        <span><strong>发布：</strong>2026 年 7 月 3 日</span>
+        <span><strong>模型：</strong>Zorix Nex 2.8 Coder</span>
+        <span><strong>类型：</strong>代码与软件工程</span>
+      </div>
+
+      <section class="intro-section reveal" id="overview">
+        <div class="section-label">概览</div>
+
+        <p class="intro-lead">
+          Nex 2.8 Coder 不只是生成代码。它能够读取项目结构、理解文件之间的关系、分析错误、制定修改方案，并持续完成从实现到验证的开发流程。
+        </p>
+      </section>
+
+      <section class="content-section" id="capabilities">
+        <h2 class="section-heading reveal">
+          为真实软件工程而设计
+        </h2>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-number">01</span>
+
+            <div>
+              <h3>完整代码库理解</h3>
+
+              <p>
+                分析目录结构、源代码、配置文件、类型定义、测试和模块依赖，从项目整体而不是单一文件生成建议。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">02</span>
+
+            <div>
+              <h3>长期任务执行</h3>
+
+              <p>
+                将复杂需求拆分为计划、修改、调试与验证步骤，在更长的任务过程中保持目标和上下文一致。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">03</span>
+
+            <div>
+              <h3>调试与根因分析</h3>
+
+              <p>
+                结合日志、堆栈、终端输出和相关代码定位问题，解释错误形成原因并生成可执行的修复方案。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">04</span>
+
+            <div>
+              <h3>代码重构</h3>
+
+              <p>
+                在保持原有行为的基础上优化代码结构、可读性、模块边界和复用方式，并说明每项修改的影响。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">05</span>
+
+            <div>
+              <h3>多语言开发</h3>
+
+              <p>
+                支持 Python、JavaScript、TypeScript、Java、C、C++、Rust、Go、SQL、Shell 和现代 Web 技术栈。
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <span class="feature-number">06</span>
+
+            <div>
+              <h3>测试与验证</h3>
+
+              <p>
+                自动生成测试、检查边界情况、分析失败输出，并根据测试结果继续调整实现，减少未验证的代码修改。
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="dark-section" id="performance">
+        <div class="dark-inner">
+          <h2 class="dark-heading reveal">
+            从需求，到代码，再到可验证的结果
+          </h2>
+
+          <div class="terminal reveal">
+            <div class="terminal-bar">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-title">Zorix Nex 2.8 Coder</span>
+            </div>
+
+            <div class="terminal-body" id="terminalBody">
+              <span class="terminal-line">
+                <span class="prompt">zorix@nex:~$</span>
+                <span class="command">
+                  分析支付接口偶发重复扣款的问题，并提供修复方案
+                </span>
+              </span>
+
+              <span class="terminal-line answer">
+                正在读取订单服务、支付回调、数据库事务与重试逻辑……
+              </span>
+
+              <span class="terminal-line answer">
+                已发现两个可能同时触发的执行路径：
+              </span>
+
+              <span class="terminal-line code">
+                1. webhook 重试未验证 payment_event_id
+              </span>
+
+              <span class="terminal-line code">
+                2. createPayment() 在超时后重新提交请求
+              </span>
+
+              <span class="terminal-line answer">
+                建议：
+              </span>
+
+              <span class="terminal-line code">
+                - 为支付事件增加唯一约束
+              </span>
+
+              <span class="terminal-line code">
+                - 使用幂等键保护外部请求
+              </span>
+
+              <span class="terminal-line code">
+                - 将状态更新放入同一数据库事务
+              </span>
+
+              <span class="terminal-line code">
+                - 添加并发回调集成测试
+              </span>
+
+              <span class="terminal-line answer">
+                正在生成补丁与测试……
+                <span class="cursor"></span>
+              </span>
+            </div>
+          </div>
+
+          <div class="benchmark-grid">
+            <div class="benchmark reveal">
+              <div class="benchmark-label">代码库上下文</div>
+              <div class="benchmark-value">Multi-file</div>
+              <div class="benchmark-note">
+                跨文件理解模块、依赖与调用关系
+              </div>
+            </div>
+
+            <div class="benchmark reveal">
+              <div class="benchmark-label">任务模式</div>
+              <div class="benchmark-value">Agentic</div>
+              <div class="benchmark-note">
+                支持计划、修改、执行和验证
+              </div>
+            </div>
+
+            <div class="benchmark reveal">
+              <div class="benchmark-label">推理策略</div>
+              <div class="benchmark-value">Adaptive</div>
+              <div class="benchmark-note">
+                根据任务复杂度动态调整分析深度
+              </div>
+            </div>
+
+            <div class="benchmark reveal">
+              <div class="benchmark-label">主要领域</div>
+              <div class="benchmark-value">Coding</div>
+              <div class="benchmark-note">
+                面向软件开发和工程任务优化
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="article-section" id="technical">
+        <aside class="article-index">
+          <strong>本文内容</strong>
+          <a href="#model-design">模型设计</a>
+          <a href="#repository">代码库理解</a>
+          <a href="#reasoning">开发推理</a>
+          <a href="#debugging">调试能力</a>
+          <a href="#workflow">工作流程</a>
+          <a href="#safety">安全与控制</a>
+          <a href="#availability">提供方式</a>
+        </aside>
+
+        <article class="article-body">
+          <h2 id="model-design">面向编码任务的模型设计</h2>
+
+          <p>
+            Zorix Nex 2.8 Coder 是 Zorix Nex 系列中针对软件工程任务优化的模型。它面向的不只是短代码片段，而是包含多个目录、配置文件、依赖和测试的大型开发项目。
+          </p>
+
+          <p>
+            在处理任务时，模型会优先识别用户目标、现有项目约束、可能涉及的文件以及验证方式。对于复杂需求，它可以先生成计划，再逐步完成修改。
+          </p>
+
+          <blockquote>
+            Nex 2.8 Coder 的目标，是让模型在生成代码之前先理解项目，在提交修改之前先考虑影响，在完成修改之后继续进行验证。
+          </blockquote>
+
+          <h2 id="repository">更深入的代码库理解</h2>
+
+          <p>
+            传统代码补全通常只关注光标附近的内容。Nex 2.8 Coder 可以结合多个文件和项目结构进行分析，从而减少与现有代码风格、类型定义或模块接口不一致的结果。
+          </p>
+
+          <h3>它可以分析的内容包括</h3>
+
+          <ul>
+            <li>源代码文件和模块依赖</li>
+            <li>接口、类型和数据模型</li>
+            <li>项目配置、构建文件和环境变量定义</li>
+            <li>数据库结构与迁移记录</li>
+            <li>单元测试、集成测试和错误日志</li>
+            <li>代码风格和项目约定</li>
+          </ul>
+
+          <p>
+            当一个修改可能影响其他文件时，模型可以指出关联范围，并建议同步更新相关类型、测试或文档。
+          </p>
+
+          <h2 id="reasoning">针对开发流程的推理能力</h2>
+
+          <p>
+            Nex 2.8 Coder 可以根据任务复杂度选择不同的处理方式。简单任务可以快速完成；复杂任务则会先分析需求、列出步骤并检查潜在风险。
+          </p>
+
+          <p>
+            例如，对于“重构认证系统”这样的任务，模型不会只替换某个函数，而是会考虑登录流程、令牌生命周期、权限检查、数据库状态、错误处理和测试覆盖。
+          </p>
+
+          <h3>典型处理步骤</h3>
+
+          <ul>
+            <li>确认目标和限制条件</li>
+            <li>识别相关文件和执行路径</li>
+            <li>分析现有实现与潜在问题</li>
+            <li>制定修改计划</li>
+            <li>生成或编辑代码</li>
+            <li>运行测试与静态检查</li>
+            <li>根据结果继续修正</li>
+          </ul>
+
+          <h2 id="debugging">调试与根因分析</h2>
+
+          <p>
+            用户可以向模型提供错误信息、终端输出、HTTP 响应、堆栈轨迹或代码片段。模型会尝试关联这些信息，定位真正导致错误的执行路径。
+          </p>
+
+          <p>
+            相比只提供通用建议，Nex 2.8 Coder 更强调可验证的诊断过程，包括如何复现错误、如何缩小范围、如何检查假设以及如何确认修复结果。
+          </p>
+
+          <h2 id="workflow">适用于完整开发工作流程</h2>
+
+          <p>
+            Nex 2.8 Coder 可以用于项目创建、功能开发、API 设计、前端实现、数据库迁移、错误修复、代码审查、性能优化和文档生成。
+          </p>
+
+          <p>
+            开发者可以通过自然语言描述目标，也可以同时提交代码、项目结构或运行结果。模型将根据已有信息调整输出形式。
+          </p>
+
+          <h3>常见使用方式</h3>
+
+          <ul>
+            <li>
+              使用 <code>分析这个项目</code> 获取架构和主要模块说明
+            </li>
+            <li>
+              使用 <code>修复这个错误</code> 分析日志与相关代码
+            </li>
+            <li>
+              使用 <code>实现这个功能</code> 生成修改计划和代码
+            </li>
+            <li>
+              使用 <code>审查这些变更</code> 检查风险和回归问题
+            </li>
+            <li>
+              使用 <code>为它添加测试</code> 生成测试场景
+            </li>
+          </ul>
+
+          <h2 id="safety">安全与开发者控制</h2>
+
+          <p>
+            Zorix 建议所有 AI 生成代码在进入生产环境之前经过人工审查、测试和安全验证。尤其是认证、权限、支付、数据库迁移和敏感数据处理代码，不应未经验证直接部署。
+          </p>
+
+          <p>
+            模型可以辅助发现问题和提供修复方案，但软件发布、数据处理和系统权限的最终控制仍由开发者和组织负责。
+          </p>
+
+          <h2 id="availability">提供方式</h2>
+
+          <p>
+            Zorix Nex 2.8 Coder 将通过 Zorix 平台和兼容的开发接口提供。可用功能和访问方式可能根据产品版本、地区与部署环境有所不同。
+          </p>
+
+          <p>
+            后续更新、技术文档和模型公告将在 Zorix 新闻中心持续发布。
+          </p>
+        </article>
+      </section>
+
+      <section class="cta">
+        <div class="cta-inner">
+          <h2 class="reveal">
+            将想法转化为可以运行的软件
+          </h2>
+
+          <div class="cta-bottom">
+            <p>
+              使用 Zorix Nex 2.8 Coder 分析代码库、实现功能、修复错误并推进复杂软件工程任务。
+            </p>
+
+            <a class="action" href="https://zorix.it/chat">
+              开始使用
+              <svg viewBox="0 0 12 12" fill="none">
+                <path
+                  d="M1.5 4.5h6v6M7.5 4.5l-6.5 6.5"
+                  stroke="currentColor"
+                  stroke-width="1.35"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <span>© <span id="year"></span> Zorix</span>
+
+        <span>
+          <a href="https://zorix.it/">Zorix 主站</a>
+          ·
+          <a href="https://news.zorix.it/zh-CN/news/">新闻中心</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+      const open = mobileMenu.classList.toggle("open");
+
+      document.body.classList.toggle("menu-open", open);
+      menuButton.setAttribute("aria-expanded", String(open));
+      menuButton.setAttribute(
+        "aria-label",
+        open ? "关闭导航" : "打开导航"
+      );
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        document.body.classList.remove("menu-open");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      observer.observe(element);
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
