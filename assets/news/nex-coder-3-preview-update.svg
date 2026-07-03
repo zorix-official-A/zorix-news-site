@@ -1,0 +1,320 @@
+<svg
+  width="1600"
+  height="900"
+  viewBox="0 0 1600 900"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient
+      id="background"
+      x1="140"
+      y1="80"
+      x2="1450"
+      y2="850"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="42%" stop-color="#102A43"/>
+      <stop offset="72%" stop-color="#0B4A55"/>
+      <stop offset="100%" stop-color="#0A3D2F"/>
+    </linearGradient>
+
+    <linearGradient
+      id="zorixGradient"
+      x1="180"
+      y1="170"
+      x2="600"
+      y2="610"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="42%" stop-color="#06B6D4"/>
+      <stop offset="74%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient
+      id="textGradient"
+      x1="720"
+      y1="240"
+      x2="1360"
+      y2="670"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="56%" stop-color="#DDFBFF"/>
+      <stop offset="100%" stop-color="#D9FBE7"/>
+    </linearGradient>
+
+    <radialGradient
+      id="glowOne"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(390 380) rotate(20) scale(540 500)"
+    >
+      <stop stop-color="#06B6D4" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#06B6D4" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient
+      id="glowTwo"
+      cx="0"
+      cy="0"
+      r="1"
+      gradientUnits="userSpaceOnUse"
+      gradientTransform="translate(1260 720) rotate(-135) scale(520 410)"
+    >
+      <stop stop-color="#22C55E" stop-opacity="0.19"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter
+      id="shadow"
+      x="-30%"
+      y="-30%"
+      width="160%"
+      height="160%"
+    >
+      <feDropShadow
+        dx="0"
+        dy="28"
+        stdDeviation="34"
+        flood-color="#000000"
+        flood-opacity="0.28"
+      />
+    </filter>
+
+    <filter
+      id="softGlow"
+      x="-40%"
+      y="-40%"
+      width="180%"
+      height="180%"
+    >
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+
+    <pattern
+      id="grid"
+      width="48"
+      height="48"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M48 0H0V48"
+        stroke="#FFFFFF"
+        stroke-opacity="0.045"
+        stroke-width="1"
+      />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#glowOne)"/>
+  <rect width="1600" height="900" fill="url(#glowTwo)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <!-- Decorative lines -->
+  <path
+    d="M0 742C310 678 530 785 810 720C1090 655 1310 574 1600 620"
+    stroke="#FFFFFF"
+    stroke-opacity="0.06"
+    stroke-width="2"
+  />
+
+  <path
+    d="M0 792C330 728 570 824 860 770C1140 717 1350 654 1600 680"
+    stroke="#06B6D4"
+    stroke-opacity="0.09"
+    stroke-width="2"
+  />
+
+  <!-- Zorix logo block -->
+  <g filter="url(#shadow)">
+    <rect
+      x="150"
+      y="174"
+      width="470"
+      height="470"
+      rx="112"
+      fill="url(#zorixGradient)"
+    />
+
+    <g opacity="0.16">
+      <rect
+        x="230"
+        y="260"
+        width="248"
+        height="28"
+        rx="14"
+        fill="#FFFFFF"
+      />
+      <rect
+        x="230"
+        y="318"
+        width="192"
+        height="20"
+        rx="10"
+        fill="#FFFFFF"
+      />
+      <rect
+        x="230"
+        y="364"
+        width="218"
+        height="20"
+        rx="10"
+        fill="#FFFFFF"
+      />
+      <rect
+        x="230"
+        y="410"
+        width="158"
+        height="20"
+        rx="10"
+        fill="#FFFFFF"
+      />
+    </g>
+
+    <path
+      d="M250 274H522L433 374H501L280 541L379 427H266L365 316H250Z"
+      fill="#FFFFFF"
+    />
+
+    <circle
+      cx="514"
+      cy="257"
+      r="23"
+      fill="#FFFFFF"
+    />
+
+    <circle
+      cx="514"
+      cy="257"
+      r="44"
+      stroke="#FFFFFF"
+      stroke-opacity="0.3"
+      stroke-width="9"
+    />
+  </g>
+
+  <!-- Status mark -->
+  <g>
+    <rect
+      x="152"
+      y="697"
+      width="294"
+      height="56"
+      rx="28"
+      fill="#FFFFFF"
+      fill-opacity="0.08"
+      stroke="#FFFFFF"
+      stroke-opacity="0.13"
+    />
+
+    <circle
+      cx="190"
+      cy="725"
+      r="8"
+      fill="#22C55E"
+    />
+
+    <text
+      x="214"
+      y="734"
+      fill="#DDF7E8"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="24"
+      font-weight="600"
+      letter-spacing="1.4"
+    >
+      TECHNICAL UPDATE
+    </text>
+  </g>
+
+  <!-- Main title -->
+  <text
+    x="720"
+    y="260"
+    fill="#AAB9C5"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="28"
+    font-weight="600"
+    letter-spacing="7"
+  >
+    ZORIX MODEL NOTICE
+  </text>
+
+  <text
+    x="712"
+    y="380"
+    fill="url(#textGradient)"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="112"
+    font-weight="700"
+    letter-spacing="-4"
+  >
+    NEX CODER 3
+  </text>
+
+  <text
+    x="718"
+    y="482"
+    fill="#FFFFFF"
+    fill-opacity="0.92"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="76"
+    font-weight="500"
+    letter-spacing="10"
+  >
+    PREVIEW
+  </text>
+
+  <line
+    x1="720"
+    y1="546"
+    x2="1365"
+    y2="546"
+    stroke="#FFFFFF"
+    stroke-opacity="0.17"
+    stroke-width="2"
+  />
+
+  <text
+    x="720"
+    y="618"
+    fill="#D3DEE6"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="34"
+    font-weight="500"
+    letter-spacing="1"
+  >
+    Investigation and verification update
+  </text>
+
+  <text
+    x="720"
+    y="676"
+    fill="#8FA4B3"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="25"
+    font-weight="400"
+  >
+    Transparency · Safety · Scientific rigor
+  </text>
+
+  <text
+    x="720"
+    y="754"
+    fill="#6F8796"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="22"
+    font-weight="500"
+    letter-spacing="2"
+  >
+    3 JULY 2026 · ZORIX OFFICIAL
+  </text>
+</svg>
