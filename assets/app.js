@@ -20,6 +20,12 @@
   const newsRoot = document.querySelector('[data-news-root]');
   if (!newsRoot) return;
 
+  // Resolve files from the actual app.js URL, so GitHub Pages repository paths
+  // and custom domains both work reliably.
+  const scriptUrl = document.currentScript?.src || new URL('../../assets/app.js', window.location.href).href;
+  const siteRoot = new URL('../', scriptUrl);
+  const dataUrl = new URL('data/news.json', siteRoot).href;
+
   const language = document.documentElement.lang || 'en';
   const fallbackLanguage = 'en';
   const dictionary = {
@@ -49,7 +55,7 @@
   const resolveAsset = path => {
     if (!path) return '';
     if (/^(https?:|data:|\/)/i.test(path)) return path;
-    return `../../${String(path).replace(/^\.\//, '')}`;
+    return new URL(String(path).replace(/^\.\//, ''), siteRoot).href;
   };
 
   const state = (title, text, loading = false) => `
@@ -91,7 +97,7 @@
   };
 
   newsRoot.innerHTML = state(t.loading, '', true);
-  fetch('../../data/news.json', { cache: 'no-store' })
+  fetch(dataUrl, { cache: 'no-store' })
     .then(response => {
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return response.json();
@@ -102,7 +108,7 @@
       newsRoot.innerHTML = visible.length ? `<div class="news-list">${visible.map(renderArticle).join('')}</div>` : state(t.emptyTitle, t.emptyText);
     })
     .catch(error => {
-      console.error('Zorix News JSON error:', error);
+      console.error('Zorix News JSON error:', error, 'URL:', dataUrl);
       newsRoot.innerHTML = state(t.errorTitle, t.errorText);
     });
 })();
