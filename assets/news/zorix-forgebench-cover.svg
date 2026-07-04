@@ -1,0 +1,146 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="background" x1="100" y1="80" x2="1500" y2="820" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07111F"/>
+      <stop offset="38%" stop-color="#102139"/>
+      <stop offset="72%" stop-color="#2A1D16"/>
+      <stop offset="100%" stop-color="#13281E"/>
+    </linearGradient>
+
+    <linearGradient id="brand" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="42%" stop-color="#06B6D4"/>
+      <stop offset="72%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="forge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+
+    <linearGradient id="success" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#86EFAC"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+
+  <circle cx="1320" cy="170" r="240" fill="#F97316" opacity="0.10"/>
+  <circle cx="1320" cy="730" r="300" fill="#22C55E" opacity="0.08"/>
+  <circle cx="210" cy="720" r="280" fill="#2563EB" opacity="0.08"/>
+
+  <g opacity="0.07">
+    <path d="M0 120H1600M0 240H1600M0 360H1600M0 480H1600M0 600H1600M0 720H1600M0 840H1600" stroke="white"/>
+    <path d="M160 0V900M360 0V900M560 0V900M760 0V900M960 0V900M1160 0V900M1360 0V900" stroke="white"/>
+  </g>
+
+  <g transform="translate(110 100)">
+    <rect width="160" height="160" rx="42" fill="url(#brand)"/>
+
+    <path
+      d="M36 40H124L95 74H114L47 128L77 89H41L69 56H36Z"
+      fill="white"
+    />
+
+    <path
+      d="M118 29L123 39L134 41L126 49L128 60L118 55L108 60L110 49L102 41L113 39Z"
+      fill="white"
+      opacity="0.78"
+    />
+  </g>
+
+  <text x="320" y="150" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="5">
+    ZORIX
+  </text>
+
+  <text x="110" y="350" fill="white" font-family="Arial, sans-serif" font-size="104" font-weight="700">
+    ForgeBench
+  </text>
+
+  <text x="110" y="430" fill="#FED7AA" font-family="Arial, sans-serif" font-size="42" font-weight="500">
+    Build. Test. Deliver.
+  </text>
+
+  <text x="110" y="510" fill="#D7DEE8" font-family="Arial, sans-serif" font-size="27">
+    A comprehensive benchmark for AI-built software systems
+  </text>
+
+  <g transform="translate(110 610)">
+    <rect width="520" height="160" rx="24" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+
+    <circle cx="38" cy="52" r="9" fill="#2563EB"/>
+    <text x="62" y="60" fill="#E5E7EB" font-family="Arial, sans-serif" font-size="22">
+      Blue — architecture
+    </text>
+
+    <circle cx="38" cy="96" r="9" fill="#F97316"/>
+    <text x="62" y="104" fill="#E5E7EB" font-family="Arial, sans-serif" font-size="22">
+      Orange — project building
+    </text>
+
+    <circle cx="38" cy="140" r="9" fill="#22C55E"/>
+    <text x="62" y="148" fill="#E5E7EB" font-family="Arial, sans-serif" font-size="22">
+      Green — verified delivery
+    </text>
+  </g>
+
+  <g transform="translate(1000 500)">
+    <rect width="440" height="300" rx="30" fill="#07101A" stroke="#334155" stroke-width="2"/>
+
+    <rect x="26" y="24" width="388" height="40" rx="12" fill="#101B2A"/>
+    <circle cx="50" cy="44" r="6" fill="#F97316"/>
+    <circle cx="72" cy="44" r="6" fill="#F59E0B"/>
+    <circle cx="94" cy="44" r="6" fill="#22C55E"/>
+
+    <text x="124" y="51" fill="#94A3B8" font-family="monospace" font-size="16">
+      forgebench/project
+    </text>
+
+    <g transform="translate(34 88)">
+      <rect x="0" y="0" width="110" height="62" rx="14" fill="#2563EB" fill-opacity="0.20" stroke="#60A5FA"/>
+      <text x="18" y="38" fill="#DBEAFE" font-family="Arial, sans-serif" font-size="18">ARCH</text>
+
+      <rect x="140" y="0" width="110" height="62" rx="14" fill="#F97316" fill-opacity="0.20" stroke="#FB923C"/>
+      <text x="158" y="38" fill="#FFEDD5" font-family="Arial, sans-serif" font-size="18">BUILD</text>
+
+      <rect x="280" y="0" width="110" height="62" rx="14" fill="#22C55E" fill-opacity="0.20" stroke="#4ADE80"/>
+      <text x="300" y="38" fill="#DCFCE7" font-family="Arial, sans-serif" font-size="18">TEST</text>
+
+      <path d="M110 31H140M250 31H280" stroke="#64748B" stroke-width="4" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(34 180)">
+      <text x="0" y="0" fill="#94A3B8" font-family="monospace" font-size="16">
+        src/
+      </text>
+      <text x="28" y="32" fill="#CBD5E1" font-family="monospace" font-size="16">
+        architecture/
+      </text>
+      <text x="28" y="64" fill="#CBD5E1" font-family="monospace" font-size="16">
+        services/
+      </text>
+      <text x="28" y="96" fill="#CBD5E1" font-family="monospace" font-size="16">
+        tests/
+      </text>
+
+      <rect x="260" y="18" width="130" height="54" rx="16" fill="url(#success)"/>
+      <path d="M290 45L306 59L334 31" stroke="#082F1B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="344" y="52" fill="#052E16" font-family="Arial, sans-serif" font-size="18" font-weight="700">
+        PASS
+      </text>
+    </g>
+  </g>
+
+  <g transform="translate(1040 215)">
+    <path d="M0 110L95 15L190 110L95 205Z" fill="#F97316" opacity="0.11"/>
+    <path d="M95 15L190 110L95 205L0 110Z" stroke="url(#forge)" stroke-width="3"/>
+    <circle cx="95" cy="110" r="38" fill="#F97316" fill-opacity="0.18" stroke="#FB923C" stroke-width="2"/>
+    <path d="M76 113L90 127L117 92" stroke="#FDBA74" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
