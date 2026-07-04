@@ -6,11 +6,11 @@
       "publishedAt": "2026-07-04T17:00:00+02:00",
       "updatedAt": "2026-07-04T17:00:00+02:00",
       "cover": {
-        "src": "/assets/news/nex-coder-3-preview-update.svg",
+        "src": "/assets/news/nex-coder-3-phase-two.svg",
         "alt": {
-          "zh-CN": "Zorix Nex Coder 3 Preview 第二阶段专家审查",
-          "en": "Zorix Nex Coder 3 Preview second-phase expert review",
-          "it": "Seconda fase di revisione esperta di Zorix Nex Coder 3 Preview"
+          "zh-CN": "Zorix Nex Coder 3 第二阶段专家审查封面",
+          "en": "Zorix Nex Coder 3 phase two expert review cover",
+          "it": "Copertina della seconda fase di revisione esperta di Zorix Nex Coder 3"
         }
       },
       "category": {
@@ -35,16 +35,16 @@
       },
       "images": [
         {
-          "src": "/assets/news/nex-coder-3-preview-update.svg",
+          "src": "/assets/news/nex-coder-3-phase-two.svg",
           "alt": {
-            "zh-CN": "Zorix Nex Coder 3 Preview 第二阶段审查封面",
-            "en": "Zorix Nex Coder 3 Preview second-phase review cover",
-            "it": "Copertina della seconda fase di revisione di Zorix Nex Coder 3 Preview"
+            "zh-CN": "Zorix Nex Coder 3 第二阶段专家审查",
+            "en": "Zorix Nex Coder 3 phase two expert review",
+            "it": "Seconda fase di revisione esperta di Zorix Nex Coder 3"
           },
           "caption": {
-            "zh-CN": "第二阶段独立专家审查已经完成",
-            "en": "The second-phase independent expert review has been completed",
-            "it": "La seconda fase di revisione indipendente è stata completata"
+            "zh-CN": "第二阶段：盲测、独立评估和专家结论",
+            "en": "Phase two: blind testing, independent evaluation, and expert assessment",
+            "it": "Seconda fase: test in cieco, valutazione indipendente e conclusioni degli esperti"
           }
         }
       ]
@@ -55,11 +55,11 @@
       "publishedAt": "2026-07-03T18:30:00+02:00",
       "updatedAt": "2026-07-04T17:00:00+02:00",
       "cover": {
-        "src": "/assets/news/nex-coder-3-preview-update.svg",
+        "src": "/assets/news/nex-coder-3-phase-one.svg",
         "alt": {
-          "zh-CN": "Zorix Nex Coder 3 Preview 官方公告封面",
-          "en": "Official Zorix Nex Coder 3 Preview notice cover",
-          "it": "Copertina ufficiale dell'annuncio di Zorix Nex Coder 3 Preview"
+          "zh-CN": "Zorix Nex Coder 3 第一阶段调查封面",
+          "en": "Zorix Nex Coder 3 phase one investigation cover",
+          "it": "Copertina della prima fase di indagine su Zorix Nex Coder 3"
         }
       },
       "category": {
@@ -84,16 +84,16 @@
       },
       "images": [
         {
-          "src": "/assets/news/nex-coder-3-preview-update.svg",
+          "src": "/assets/news/nex-coder-3-phase-one.svg",
           "alt": {
-            "zh-CN": "Zorix Nex Coder 3 说明封面",
-            "en": "Zorix Nex Coder 3 explanatory cover",
-            "it": "Copertina esplicativa di Zorix Nex Coder 3"
+            "zh-CN": "Zorix Nex Coder 3 第一阶段调查",
+            "en": "Zorix Nex Coder 3 phase one investigation",
+            "it": "Prima fase di indagine su Zorix Nex Coder 3"
           },
           "caption": {
-            "zh-CN": "Zorix Nex Coder 3 的简要说明与颜色标识",
-            "en": "A brief explanation and color notes for Zorix Nex Coder 3",
-            "it": "Breve descrizione e significato dei colori di Zorix Nex Coder 3"
+            "zh-CN": "第一阶段：日志、上下文和行为模式分析",
+            "en": "Phase one: log, context, and behavior-pattern analysis",
+            "it": "Prima fase: analisi dei log, del contesto e dei pattern comportamentali"
           }
         }
       ]
@@ -104,11 +104,11 @@
       "publishedAt": "2026-07-03T18:00:00+02:00",
       "updatedAt": "2026-07-03T18:30:00+02:00",
       "cover": {
-        "src": "/assets/news/nex-coder-3-preview-update.svg",
+        "src": "/assets/news/nex-coder-3-phase-one.svg",
         "alt": {
-          "zh-CN": "Zorix Nex Coder 3 Preview 官方公告封面",
-          "en": "Official Zorix Nex Coder 3 Preview notice cover",
-          "it": "Copertina ufficiale dell'annuncio di Zorix Nex Coder 3 Preview"
+          "zh-CN": "Zorix Nex Coder 3 第一阶段调查封面",
+          "en": "Zorix Nex Coder 3 phase one investigation cover",
+          "it": "Copertina della prima fase di indagine su Zorix Nex Coder 3"
         }
       },
       "category": {
@@ -133,16 +133,16 @@
       },
       "images": [
         {
-          "src": "/assets/news/nex-coder-3-preview-update.svg",
+          "src": "/assets/news/nex-coder-3-phase-one.svg",
           "alt": {
-            "zh-CN": "Zorix Nex Coder 3 说明封面",
-            "en": "Zorix Nex Coder 3 explanatory cover",
-            "it": "Copertina esplicativa di Zorix Nex Coder 3"
+            "zh-CN": "Zorix Nex Coder 3 第一阶段调查",
+            "en": "Zorix Nex Coder 3 phase one investigation",
+            "it": "Prima fase di indagine su Zorix Nex Coder 3"
           },
           "caption": {
-            "zh-CN": "Zorix Nex Coder 3 的简要说明与颜色标识",
-            "en": "A brief explanation and color notes for Zorix Nex Coder 3",
-            "it": "Breve descrizione e significato dei colori di Zorix Nex Coder 3"
+            "zh-CN": "第一阶段：日志、上下文和行为模式分析",
+            "en": "Phase one: log, context, and behavior-pattern analysis",
+            "it": "Prima fase: analisi dei log, del contesto e dei pattern comportamentali"
           }
         }
       ]
