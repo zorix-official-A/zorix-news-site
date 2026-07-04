@@ -47,7 +47,27 @@
             "it": "La versione web prevede l'integrazione di Zorix Nex Coder 2.8"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-game-engine-web-coming-soon/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-game-engine-web-coming-soon/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-game-engine-web-coming-soon/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     },
     {
       "id": "zorix-ascend-26c-coming-soon",
@@ -96,7 +116,27 @@
             "it": "Ascend 26C è un aggiornamento della piattaforma Zorix, non un nuovo modello di base"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-ascend-26c-coming-soon/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-ascend-26c-coming-soon/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-ascend-26c-coming-soon/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     },
     {
       "id": "zorix-forgebench-preparing-for-release",
@@ -145,7 +185,27 @@
             "it": "ForgeBench valuta i sistemi AI attraverso architettura, costruzione del progetto e consegna verificata"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-forgebench-preparing-for-release/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-forgebench-preparing-for-release/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-forgebench-preparing-for-release/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     },
     {
       "id": "zorix-nex-coder-3-preview-phase-two-review",
@@ -194,7 +254,27 @@
             "it": "Seconda fase: test in cieco, valutazione indipendente e conclusioni degli esperti"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-phase-two-review/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-phase-two-review/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-phase-two-review/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     },
     {
       "id": "zorix-nex-coder-3-preview-investigation-update",
@@ -243,7 +323,27 @@
             "it": "Prima fase: analisi dei log, del contesto e dei pattern comportamentali"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-investigation-update/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-investigation-update/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-investigation-update/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     },
     {
       "id": "zorix-nex-coder-3-preview-temporary-pause",
@@ -292,7 +392,27 @@
             "it": "Prima fase: analisi dei log, del contesto e dei pattern comportamentali"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-temporary-pause/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-temporary-pause/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-nex-coder-3-preview-temporary-pause/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     },
     {
       "id": "zorix-nex-coder-2-8-release",
@@ -341,7 +461,27 @@
             "it": "Anteprima della nuova interfaccia e delle funzionalità di Nex Coder 2.8"
           }
         }
-      ]
+      ],
+      "audio": {
+        "zh-CN": {
+          "src": "/assets/audio/news/zorix-nex-coder-2-8-release/zh-CN.mp3",
+          "type": "audio/mpeg",
+          "voice": "zh-CN-XiaoxiaoNeural",
+          "label": "中文"
+        },
+        "en": {
+          "src": "/assets/audio/news/zorix-nex-coder-2-8-release/en.mp3",
+          "type": "audio/mpeg",
+          "voice": "en-US-AriaNeural",
+          "label": "English"
+        },
+        "it": {
+          "src": "/assets/audio/news/zorix-nex-coder-2-8-release/it.mp3",
+          "type": "audio/mpeg",
+          "voice": "it-IT-ElsaNeural",
+          "label": "Italiano"
+        }
+      }
     }
   ]
 }
