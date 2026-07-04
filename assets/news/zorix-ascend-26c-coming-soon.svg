@@ -1,47 +1,30 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="90" y1="40" x2="1510" y2="860" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#080A18"/>
-      <stop offset="38%" stop-color="#17133B"/>
-      <stop offset="68%" stop-color="#132B42"/>
-      <stop offset="100%" stop-color="#15392F"/>
+    <linearGradient id="bg" x1="80" y1="40" x2="1520" y2="860">
+      <stop offset="0%" stop-color="#080C18"/>
+      <stop offset="45%" stop-color="#151A35"/>
+      <stop offset="75%" stop-color="#102E3C"/>
+      <stop offset="100%" stop-color="#12372E"/>
     </linearGradient>
 
-    <linearGradient id="brand" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+    <linearGradient id="brand" x1="0" y1="0" x2="180" y2="180">
       <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="36%" stop-color="#4F46E5"/>
+      <stop offset="35%" stop-color="#4F46E5"/>
       <stop offset="68%" stop-color="#06B6D4"/>
       <stop offset="100%" stop-color="#22C55E"/>
     </linearGradient>
 
-    <linearGradient id="orbit" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#A78BFA"/>
-      <stop offset="48%" stop-color="#67E8F9"/>
+      <stop offset="50%" stop-color="#67E8F9"/>
       <stop offset="100%" stop-color="#4ADE80"/>
     </linearGradient>
-
-    <radialGradient id="core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1265 430) rotate(90) scale(210)">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="18%" stop-color="#D8B4FE"/>
-      <stop offset="48%" stop-color="#67E8F9"/>
-      <stop offset="78%" stop-color="#22C55E"/>
-      <stop offset="100%" stop-color="#22C55E" stop-opacity="0"/>
-    </radialGradient>
-
-    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="24"/>
-    </filter>
-
-    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="8"/>
-    </filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
 
-  <circle cx="1320" cy="180" r="260" fill="#7C3AED" opacity="0.10"/>
-  <circle cx="1410" cy="730" r="320" fill="#22C55E" opacity="0.08"/>
-  <circle cx="190" cy="760" r="270" fill="#4F46E5" opacity="0.07"/>
+  <circle cx="1370" cy="170" r="260" fill="#7C3AED" opacity="0.09"/>
+  <circle cx="1360" cy="730" r="300" fill="#22C55E" opacity="0.08"/>
 
   <g opacity="0.065">
     <path d="M0 110H1600M0 220H1600M0 330H1600M0 440H1600M0 550H1600M0 660H1600M0 770H1600M0 880H1600" stroke="white"/>
@@ -50,17 +33,6 @@
 
   <g transform="translate(105 92)">
     <rect width="170" height="170" rx="44" fill="url(#brand)"/>
-
-    <g opacity="0.22">
-      <rect x="36" y="38" width="98" height="10" rx="5" fill="white"/>
-      <rect x="36" y="61" width="76" height="8" rx="4" fill="white"/>
-      <rect x="36" y="80" width="86" height="8" rx="4" fill="white"/>
-      <rect x="36" y="99" width="62" height="8" rx="4" fill="white"/>
-    </g>
-
-    <circle cx="130" cy="42" r="7" fill="white"/>
-    <circle cx="130" cy="42" r="14" fill="none" stroke="white" stroke-width="3" opacity="0.25"/>
-
     <path d="M38 44H133L102 79H122L50 138L82 96H44L75 60H38Z" fill="white"/>
   </g>
 
@@ -73,58 +45,82 @@
   </text>
 
   <text x="105" y="430" fill="#DDD6FE" font-size="43" font-family="Arial, sans-serif" font-weight="500">
-    Coming Soon
+    Platform Update · Coming Soon
   </text>
 
   <text x="105" y="505" fill="#D7DEE8" font-size="28" font-family="Arial, sans-serif">
-    A new frontier model for reasoning, science, coding, and long-running intelligent work
+    Workspaces, tools, files, tasks, reliability, and developer experience
   </text>
 
   <g transform="translate(105 590)">
     <rect width="650" height="205" rx="28" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
 
-    <text x="30" y="42" fill="white" font-size="25" font-family="Arial, sans-serif" font-weight="700">
-      Planned focus
+    <circle cx="40" cy="58" r="8" fill="#7C3AED"/>
+    <text x="62" y="66" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Purple — unified platform experience
     </text>
 
-    <circle cx="40" cy="84" r="8" fill="#7C3AED"/>
-    <text x="62" y="91" fill="#E5E7EB" font-size="21" font-family="Arial, sans-serif">
-      Adaptive reasoning and complex problem solving
+    <circle cx="40" cy="108" r="8" fill="#06B6D4"/>
+    <text x="62" y="116" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Cyan — files, tools, and task execution
     </text>
 
-    <circle cx="40" cy="124" r="8" fill="#06B6D4"/>
-    <text x="62" y="131" fill="#E5E7EB" font-size="21" font-family="Arial, sans-serif">
-      Long-context research, coding, and tool use
-    </text>
-
-    <circle cx="40" cy="164" r="8" fill="#22C55E"/>
-    <text x="62" y="171" fill="#E5E7EB" font-size="21" font-family="Arial, sans-serif">
-      Safety, verification, and enterprise control
+    <circle cx="40" cy="158" r="8" fill="#22C55E"/>
+    <text x="62" y="166" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Green — reliability and platform control
     </text>
   </g>
 
-  <g transform="translate(980 165)">
-    <circle cx="285" cy="265" r="205" fill="url(#core)" opacity="0.70" filter="url(#glow)"/>
+  <g transform="translate(935 190)">
+    <rect width="530" height="520" rx="32" fill="#0A111E" fill-opacity="0.88" stroke="url(#accent)" stroke-width="2"/>
 
-    <ellipse cx="285" cy="265" rx="225" ry="90" fill="none" stroke="url(#orbit)" stroke-width="3" opacity="0.65" transform="rotate(-18 285 265)"/>
-    <ellipse cx="285" cy="265" rx="225" ry="90" fill="none" stroke="url(#orbit)" stroke-width="2" opacity="0.38" transform="rotate(38 285 265)"/>
-    <ellipse cx="285" cy="265" rx="165" ry="165" fill="none" stroke="#67E8F9" stroke-width="2" opacity="0.30"/>
+    <rect x="28" y="28" width="474" height="56" rx="16" fill="white" fill-opacity="0.055"/>
+    <circle cx="57" cy="56" r="8" fill="#7C3AED"/>
+    <text x="82" y="64" fill="white" font-size="22" font-family="Arial, sans-serif" font-weight="700">
+      Zorix Workspace
+    </text>
 
-    <circle cx="111" cy="327" r="10" fill="#A78BFA" filter="url(#softGlow)"/>
-    <circle cx="432" cy="167" r="10" fill="#67E8F9" filter="url(#softGlow)"/>
-    <circle cx="397" cy="394" r="10" fill="#4ADE80" filter="url(#softGlow)"/>
+    <rect x="28" y="108" width="220" height="170" rx="20" fill="white" fill-opacity="0.045" stroke="white" stroke-opacity="0.08"/>
+    <text x="50" y="143" fill="#C4B5FD" font-size="19" font-family="Arial, sans-serif" font-weight="700">
+      Models &amp; Tools
+    </text>
+    <rect x="50" y="164" width="154" height="16" rx="8" fill="#7C3AED" opacity="0.55"/>
+    <rect x="50" y="194" width="124" height="16" rx="8" fill="#06B6D4" opacity="0.55"/>
+    <rect x="50" y="224" width="142" height="16" rx="8" fill="#22C55E" opacity="0.55"/>
 
-    <circle cx="285" cy="265" r="72" fill="url(#brand)"/>
-    <path d="M248 227H326L301 256H318L260 303L286 270H255L280 241H248Z" fill="white"/>
+    <rect x="270" y="108" width="232" height="170" rx="20" fill="white" fill-opacity="0.045" stroke="white" stroke-opacity="0.08"/>
+    <text x="292" y="143" fill="#A5F3FC" font-size="19" font-family="Arial, sans-serif" font-weight="700">
+      Active Task
+    </text>
+    <circle cx="307" cy="181" r="8" fill="#22C55E"/>
+    <text x="328" y="188" fill="#E5E7EB" font-size="17" font-family="Arial, sans-serif">
+      Running
+    </text>
+    <rect x="292" y="216" width="180" height="12" rx="6" fill="#1F2937"/>
+    <rect x="292" y="216" width="132" height="12" rx="6" fill="#06B6D4"/>
+
+    <rect x="28" y="302" width="474" height="92" rx="20" fill="white" fill-opacity="0.045" stroke="white" stroke-opacity="0.08"/>
+    <text x="50" y="337" fill="#DDE7EE" font-size="19" font-family="Arial, sans-serif" font-weight="700">
+      Project files
+    </text>
+    <text x="50" y="370" fill="#9CA3AF" font-size="17" font-family="Arial, sans-serif">
+      Documents · Code · Images · Data
+    </text>
+
+    <rect x="28" y="418" width="474" height="74" rx="20" fill="white" fill-opacity="0.045" stroke="white" stroke-opacity="0.08"/>
+    <circle cx="57" cy="455" r="9" fill="#4ADE80"/>
+    <text x="82" y="463" fill="white" font-size="20" font-family="Arial, sans-serif" font-weight="700">
+      Platform systems ready
+    </text>
   </g>
 
-  <g transform="translate(1110 685)">
-    <rect width="330" height="108" rx="23" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
-    <text x="24" y="36" fill="#D4D8E3" font-size="17" font-family="Arial, sans-serif">
+  <g transform="translate(1140 746)">
+    <rect width="300" height="78" rx="21" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+    <text x="24" y="31" fill="#D4D8E3" font-size="16" font-family="Arial, sans-serif">
       Release status
     </text>
-    <text x="24" y="75" fill="white" font-size="31" font-family="Arial, sans-serif" font-weight="700">
-      Preview in preparation
+    <text x="24" y="58" fill="white" font-size="25" font-family="Arial, sans-serif" font-weight="700">
+      Rollout preparation
     </text>
   </g>
 </svg>
