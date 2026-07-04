@@ -1,0 +1,121 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1520" y2="860">
+      <stop offset="0%" stop-color="#07111F"/>
+      <stop offset="42%" stop-color="#122746"/>
+      <stop offset="72%" stop-color="#16343C"/>
+      <stop offset="100%" stop-color="#18251B"/>
+    </linearGradient>
+
+    <linearGradient id="brand" x1="0" y1="0" x2="180" y2="180">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="35%" stop-color="#06B6D4"/>
+      <stop offset="70%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="52%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="1370" cy="180" r="270" fill="#06B6D4" opacity="0.09"/>
+  <circle cx="1340" cy="760" r="310" fill="#22C55E" opacity="0.07"/>
+  <circle cx="190" cy="760" r="250" fill="#2563EB" opacity="0.07"/>
+
+  <g opacity="0.065">
+    <path d="M0 110H1600M0 220H1600M0 330H1600M0 440H1600M0 550H1600M0 660H1600M0 770H1600M0 880H1600" stroke="white"/>
+    <path d="M120 0V900M300 0V900M480 0V900M660 0V900M840 0V900M1020 0V900M1200 0V900M1380 0V900M1560 0V900" stroke="white"/>
+  </g>
+
+  <g transform="translate(105 92)">
+    <rect width="170" height="170" rx="44" fill="url(#brand)"/>
+    <path d="M38 44H133L102 79H122L50 138L82 96H44L75 60H38Z" fill="white"/>
+  </g>
+
+  <text x="325" y="145" fill="white" font-size="31" font-family="Arial, sans-serif" font-weight="700" letter-spacing="5">
+    ZORIX
+  </text>
+
+  <text x="105" y="344" fill="white" font-size="96" font-family="Arial, sans-serif" font-weight="700">
+    Game Engine Web
+  </text>
+
+  <text x="105" y="424" fill="#BFF7FF" font-size="42" font-family="Arial, sans-serif" font-weight="500">
+    Coming Soon
+  </text>
+
+  <text x="105" y="500" fill="#D7DEE8" font-size="28" font-family="Arial, sans-serif">
+    Build, script, preview, and manage game projects directly in the browser
+  </text>
+
+  <g transform="translate(105 590)">
+    <rect width="670" height="205" rx="28" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+
+    <circle cx="40" cy="58" r="8" fill="#2563EB"/>
+    <text x="62" y="66" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Browser-based scenes and project editing
+    </text>
+
+    <circle cx="40" cy="108" r="8" fill="#06B6D4"/>
+    <text x="62" y="116" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Real-time preview and asset workflows
+    </text>
+
+    <circle cx="40" cy="158" r="8" fill="#22C55E"/>
+    <text x="62" y="166" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Planned support for Zorix Nex Coder 2.8
+    </text>
+  </g>
+
+  <g transform="translate(910 165)">
+    <rect width="560" height="560" rx="34" fill="#08111D" fill-opacity="0.90" stroke="url(#accent)" stroke-width="2"/>
+
+    <rect x="26" y="26" width="508" height="48" rx="14" fill="white" fill-opacity="0.055"/>
+    <circle cx="51" cy="50" r="6" fill="#EF4444"/>
+    <circle cx="73" cy="50" r="6" fill="#F59E0B"/>
+    <circle cx="95" cy="50" r="6" fill="#22C55E"/>
+
+    <text x="122" y="57" fill="#DDE7EE" font-size="18" font-family="Arial, sans-serif" font-weight="700">
+      Zorix Game Engine
+    </text>
+
+    <rect x="26" y="98" width="140" height="430" rx="18" fill="white" fill-opacity="0.035" stroke="white" stroke-opacity="0.07"/>
+    <text x="45" y="130" fill="#A5F3FC" font-size="17" font-family="Arial, sans-serif" font-weight="700">Scene</text>
+    <text x="45" y="165" fill="#D1D5DB" font-size="15" font-family="Arial, sans-serif">World</text>
+    <text x="60" y="195" fill="#9CA3AF" font-size="15" font-family="Arial, sans-serif">Camera</text>
+    <text x="60" y="225" fill="#9CA3AF" font-size="15" font-family="Arial, sans-serif">Player</text>
+    <text x="60" y="255" fill="#9CA3AF" font-size="15" font-family="Arial, sans-serif">Light</text>
+    <text x="60" y="285" fill="#9CA3AF" font-size="15" font-family="Arial, sans-serif">Environment</text>
+
+    <rect x="186" y="98" width="348" height="265" rx="18" fill="#0C1B2C" stroke="white" stroke-opacity="0.07"/>
+
+    <path d="M360 148L472 325H248L360 148Z" fill="#2563EB" opacity="0.70"/>
+    <rect x="282" y="240" width="156" height="85" rx="14" fill="#14B8A6" opacity="0.78"/>
+    <circle cx="420" cy="180" r="34" fill="#FBBF24" opacity="0.88"/>
+
+    <path d="M215 334H507" stroke="#67E8F9" stroke-width="2" opacity="0.60"/>
+    <path d="M260 126V340M360 126V340M460 126V340" stroke="white" stroke-opacity="0.06"/>
+
+    <rect x="186" y="383" width="348" height="145" rx="18" fill="white" fill-opacity="0.035" stroke="white" stroke-opacity="0.07"/>
+
+    <text x="207" y="414" fill="#86EFAC" font-size="16" font-family="monospace">Nex Coder 2.8</text>
+    <text x="207" y="444" fill="#D1D5DB" font-size="15" font-family="monospace">Generate player movement script</text>
+    <text x="207" y="474" fill="#67E8F9" font-size="15" font-family="monospace">✓ Script created</text>
+    <text x="207" y="504" fill="#9CA3AF" font-size="15" font-family="monospace">Preview ready</text>
+  </g>
+
+  <g transform="translate(1135 755)">
+    <rect width="310" height="76" rx="20" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+    <text x="24" y="29" fill="#D4D8E3" font-size="16" font-family="Arial, sans-serif">
+      Release status
+    </text>
+    <text x="24" y="56" fill="white" font-size="25" font-family="Arial, sans-serif" font-weight="700">
+      Web preview planned
+    </text>
+  </g>
+</svg>
