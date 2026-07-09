@@ -1,0 +1,131 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1520" y2="860">
+      <stop offset="0%" stop-color="#07111F"/>
+      <stop offset="42%" stop-color="#13254A"/>
+      <stop offset="72%" stop-color="#14333F"/>
+      <stop offset="100%" stop-color="#112F28"/>
+    </linearGradient>
+
+    <linearGradient id="brand" x1="0" y1="0" x2="180" y2="180">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="38%" stop-color="#06B6D4"/>
+      <stop offset="72%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="1365" cy="180" r="270" fill="#06B6D4" opacity="0.09"/>
+  <circle cx="1320" cy="755" r="310" fill="#22C55E" opacity="0.08"/>
+  <circle cx="190" cy="760" r="250" fill="#2563EB" opacity="0.07"/>
+
+  <g opacity="0.065">
+    <path d="M0 110H1600M0 220H1600M0 330H1600M0 440H1600M0 550H1600M0 660H1600M0 770H1600M0 880H1600" stroke="white"/>
+    <path d="M120 0V900M300 0V900M480 0V900M660 0V900M840 0V900M1020 0V900M1200 0V900M1380 0V900M1560 0V900" stroke="white"/>
+  </g>
+
+  <g transform="translate(105 92)">
+    <rect width="170" height="170" rx="44" fill="url(#brand)"/>
+    <path d="M38 44H133L102 79H122L50 138L82 96H44L75 60H38Z" fill="white"/>
+  </g>
+
+  <text x="325" y="145" fill="white" font-size="31" font-family="Arial, sans-serif" font-weight="700" letter-spacing="5">
+    ZORIX
+  </text>
+
+  <text x="105" y="350" fill="white" font-size="104" font-family="Arial, sans-serif" font-weight="700">
+    Moment
+  </text>
+
+  <text x="105" y="430" fill="#BFF7FF" font-size="42" font-family="Arial, sans-serif" font-weight="500">
+    Real-time Chat · Beta Access Soon
+  </text>
+
+  <text x="105" y="505" fill="#D7DEE8" font-size="28" font-family="Arial, sans-serif">
+    Fast conversations, live presence, and community spaces for Zorix users
+  </text>
+
+  <g transform="translate(105 590)">
+    <rect width="650" height="205" rx="28" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+
+    <circle cx="40" cy="58" r="8" fill="#2563EB"/>
+    <text x="62" y="66" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Real-time text conversations
+    </text>
+
+    <circle cx="40" cy="108" r="8" fill="#06B6D4"/>
+    <text x="62" y="116" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Presence, rooms, and early moderation tools
+    </text>
+
+    <circle cx="40" cy="158" r="8" fill="#22C55E"/>
+    <text x="62" y="166" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Beta Access phase opening soon
+    </text>
+  </g>
+
+  <g transform="translate(915 160)">
+    <rect width="560" height="575" rx="34" fill="#08111D" fill-opacity="0.90" stroke="url(#accent)" stroke-width="2"/>
+
+    <rect x="28" y="28" width="504" height="58" rx="17" fill="white" fill-opacity="0.055"/>
+    <circle cx="58" cy="57" r="17" fill="url(#brand)"/>
+    <text x="88" y="64" fill="white" font-size="21" font-family="Arial, sans-serif" font-weight="700">
+      Zorix Moment
+    </text>
+    <circle cx="475" cy="57" r="7" fill="#22C55E"/>
+    <text x="490" y="63" fill="#86EFAC" font-size="15" font-family="Arial, sans-serif">Live</text>
+
+    <rect x="28" y="110" width="140" height="405" rx="20" fill="white" fill-opacity="0.035" stroke="white" stroke-opacity="0.08"/>
+    <text x="50" y="145" fill="#A5F3FC" font-size="17" font-family="Arial, sans-serif" font-weight="700">Spaces</text>
+    <text x="50" y="185" fill="#E5E7EB" font-size="16" font-family="Arial, sans-serif"># general</text>
+    <text x="50" y="220" fill="#94A3B8" font-size="16" font-family="Arial, sans-serif"># support</text>
+    <text x="50" y="255" fill="#94A3B8" font-size="16" font-family="Arial, sans-serif"># updates</text>
+    <text x="50" y="290" fill="#94A3B8" font-size="16" font-family="Arial, sans-serif"># beta</text>
+
+    <rect x="190" y="110" width="342" height="405" rx="20" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.08"/>
+
+    <g transform="translate(215 142)">
+      <circle cx="22" cy="22" r="22" fill="#2563EB"/>
+      <rect x="58" y="4" width="205" height="56" rx="16" fill="#0F1B2C"/>
+      <text x="76" y="28" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif">Welcome to Moment.</text>
+      <text x="76" y="48" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Real-time chat is starting soon.</text>
+    </g>
+
+    <g transform="translate(215 230)">
+      <circle cx="22" cy="22" r="22" fill="#06B6D4"/>
+      <rect x="58" y="4" width="235" height="56" rx="16" fill="#0F1B2C"/>
+      <text x="76" y="28" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif">Beta Access is opening.</text>
+      <text x="76" y="48" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Rooms, presence, and moderation.</text>
+    </g>
+
+    <g transform="translate(215 318)">
+      <circle cx="22" cy="22" r="22" fill="#22C55E"/>
+      <rect x="58" y="4" width="185" height="56" rx="16" fill="#0F1B2C"/>
+      <text x="76" y="28" fill="#E5E7EB" font-size="15" font-family="Arial, sans-serif">Typing now...</text>
+      <text x="76" y="48" fill="#94A3B8" font-size="13" font-family="Arial, sans-serif">Live conversation</text>
+    </g>
+
+    <rect x="215" y="438" width="292" height="48" rx="16" fill="#0F1B2C" stroke="white" stroke-opacity="0.08"/>
+    <text x="238" y="468" fill="#64748B" font-size="16" font-family="Arial, sans-serif">
+      Send a message...
+    </text>
+  </g>
+
+  <g transform="translate(1135 765)">
+    <rect width="310" height="76" rx="20" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+    <text x="24" y="29" fill="#D4D8E3" font-size="16" font-family="Arial, sans-serif">
+      Status
+    </text>
+    <text x="24" y="56" fill="white" font-size="25" font-family="Arial, sans-serif" font-weight="700">
+      Beta Access soon
+    </text>
+  </g>
+</svg>
