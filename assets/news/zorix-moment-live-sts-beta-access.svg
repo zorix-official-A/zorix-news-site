@@ -1,0 +1,131 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="40" x2="1520" y2="860">
+      <stop offset="0%" stop-color="#070D1B"/>
+      <stop offset="38%" stop-color="#131B3B"/>
+      <stop offset="68%" stop-color="#102E3E"/>
+      <stop offset="100%" stop-color="#123528"/>
+    </linearGradient>
+
+    <linearGradient id="brand" x1="0" y1="0" x2="180" y2="180">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="36%" stop-color="#06B6D4"/>
+      <stop offset="70%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="50%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#4ADE80"/>
+    </linearGradient>
+
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="1370" cy="170" r="270" fill="#06B6D4" opacity="0.09"/>
+  <circle cx="1320" cy="745" r="310" fill="#22C55E" opacity="0.08"/>
+  <circle cx="190" cy="760" r="250" fill="#2563EB" opacity="0.07"/>
+
+  <g opacity="0.065">
+    <path d="M0 110H1600M0 220H1600M0 330H1600M0 440H1600M0 550H1600M0 660H1600M0 770H1600M0 880H1600" stroke="white"/>
+    <path d="M120 0V900M300 0V900M480 0V900M660 0V900M840 0V900M1020 0V900M1200 0V900M1380 0V900M1560 0V900" stroke="white"/>
+  </g>
+
+  <g transform="translate(105 92)">
+    <rect width="170" height="170" rx="44" fill="url(#brand)"/>
+    <path d="M38 44H133L102 79H122L50 138L82 96H44L75 60H38Z" fill="white"/>
+  </g>
+
+  <text x="325" y="145" fill="white" font-size="31" font-family="Arial, sans-serif" font-weight="700" letter-spacing="5">
+    ZORIX
+  </text>
+
+  <text x="105" y="340" fill="white" font-size="102" font-family="Arial, sans-serif" font-weight="700">
+    Moment
+  </text>
+
+  <text x="105" y="420" fill="#BFF7FF" font-size="42" font-family="Arial, sans-serif" font-weight="500">
+    AI Live STS · Beta Access Soon
+  </text>
+
+  <text x="105" y="500" fill="#D7DEE8" font-size="28" font-family="Arial, sans-serif">
+    Speech-to-speech real-time voice conversations with Zorix AI
+  </text>
+
+  <g transform="translate(105 590)">
+    <rect width="690" height="205" rx="28" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+
+    <circle cx="40" cy="58" r="8" fill="#2563EB"/>
+    <text x="62" y="66" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Real-time speech input and AI voice replies
+    </text>
+
+    <circle cx="40" cy="108" r="8" fill="#06B6D4"/>
+    <text x="62" y="116" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Low-latency conversation, interruption, and context
+    </text>
+
+    <circle cx="40" cy="158" r="8" fill="#22C55E"/>
+    <text x="62" y="166" fill="#E5E7EB" font-size="22" font-family="Arial, sans-serif">
+      Not a text chat room — AI speech-to-speech
+    </text>
+  </g>
+
+  <g transform="translate(925 145)">
+    <rect width="540" height="600" rx="36" fill="#08111D" fill-opacity="0.90" stroke="url(#wave)" stroke-width="2"/>
+
+    <rect x="34" y="34" width="472" height="62" rx="19" fill="white" fill-opacity="0.055"/>
+    <circle cx="66" cy="65" r="18" fill="url(#brand)"/>
+    <text x="98" y="72" fill="white" font-size="21" font-family="Arial, sans-serif" font-weight="700">
+      AI Live STS
+    </text>
+    <circle cx="445" cy="65" r="7" fill="#22C55E"/>
+    <text x="462" y="71" fill="#86EFAC" font-size="15" font-family="Arial, sans-serif">
+      Voice
+    </text>
+
+    <circle cx="270" cy="285" r="105" fill="#06B6D4" opacity="0.16" filter="url(#glow)"/>
+    <circle cx="270" cy="285" r="92" fill="url(#brand)" opacity="0.95"/>
+
+    <path d="M228 260V310H258L298 342V228L258 260H228Z" fill="white"/>
+    <path d="M318 255C338 275 338 295 318 315" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <path d="M342 230C382 270 382 300 342 340" fill="none" stroke="white" stroke-width="8" stroke-linecap="round" opacity="0.55"/>
+
+    <g transform="translate(70 440)">
+      <rect width="400" height="86" rx="24" fill="white" fill-opacity="0.045" stroke="white" stroke-opacity="0.08"/>
+
+      <rect x="34" y="28" width="10" height="30" rx="5" fill="#60A5FA"/>
+      <rect x="55" y="18" width="10" height="50" rx="5" fill="#22D3EE"/>
+      <rect x="76" y="34" width="10" height="18" rx="5" fill="#4ADE80"/>
+      <rect x="97" y="12" width="10" height="62" rx="5" fill="#22D3EE"/>
+      <rect x="118" y="25" width="10" height="36" rx="5" fill="#60A5FA"/>
+
+      <text x="158" y="38" fill="#E5E7EB" font-size="18" font-family="Arial, sans-serif" font-weight="700">
+        Listening and responding
+      </text>
+      <text x="158" y="62" fill="#94A3B8" font-size="15" font-family="Arial, sans-serif">
+        Speech → Zorix AI → Speech
+      </text>
+    </g>
+
+    <g transform="translate(82 160)" opacity="0.62">
+      <path d="M0 130C70 80 120 80 190 130C260 180 310 180 380 130" fill="none" stroke="url(#wave)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M0 170C70 120 120 120 190 170C260 220 310 220 380 170" fill="none" stroke="url(#wave)" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    </g>
+  </g>
+
+  <g transform="translate(1135 760)">
+    <rect width="310" height="76" rx="20" fill="white" fill-opacity="0.05" stroke="white" stroke-opacity="0.12"/>
+    <text x="24" y="29" fill="#D4D8E3" font-size="16" font-family="Arial, sans-serif">
+      Status
+    </text>
+    <text x="24" y="56" fill="white" font-size="25" font-family="Arial, sans-serif" font-weight="700">
+      Beta Access soon
+    </text>
+  </g>
+</svg>
